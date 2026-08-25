@@ -8,7 +8,7 @@ const LEAGUE_DATA = {
       "Hennelly's A",
       "Hennelly's B",
       "Mullins' A",
-      "O'Donnell's C",
+      "The Auld Triangle",
       "Walsh's A"
     ],
     fixtures: [
@@ -26,7 +26,7 @@ const LEAGUE_DATA = {
         hs: 4, as: 5
       },
       {
-        id: 4, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "O'Donnell's C", away: "Bradley's A",
+        id: 4, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "The Auld Triangle", away: "Bradley's A",
         hs: 4, as: 5
       },
       // Week 2
@@ -35,7 +35,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 6, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "Hennelly's B", away: "O'Donnell's C",
+        id: 6, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "Hennelly's B", away: "The Auld Triangle",
         hs: null, as: null
       },
       {
@@ -60,7 +60,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 12, week: 3, date: "23 Oct 2026", time: "9:30 pm", home: "Walsh's A", away: "Hennelly's A",
+        id: 12, week: 3, date: "23 Oct 2026", time: "9:30 pm", home: "Walsh's A", away: "The Auld Triangle",
         hs: null, as: null
       }
     ]
@@ -78,7 +78,7 @@ const LEAGUE_DATA = {
       "The Lady Gregory",
       "The Ledger Bar",
       "Walsh's B",
-      "Hennelly's C"
+      "O'Donnell's C"
     ],
     fixtures: [
       // Week 1
@@ -127,6 +127,9 @@ const LEAGUE_DATA = {
     }
     , {
       player: "Brendan Daly", team: "Mullins' A", total: 2
+    }
+    , {
+      player: "Michael C Rabbitte", team: "Mullins' A", total: 1
     }
   ],
   checkouts: [{
