@@ -72,6 +72,7 @@ const LEAGUE_DATA = {
     teams: [
       "Bradley's B",
       "Harte's",
+      "Hennelly's C",
       "McCarthy's",
       "Mullins B",
       "O'Donnells B",
