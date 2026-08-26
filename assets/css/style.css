@@ -618,3 +618,147 @@ footer span {
   object-fit: contain;
   display: block;
 }
+/* =========================
+   NAVIGATION DROPDOWN
+   ========================= */
+
+.nav-dropdown {
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+.dropdown-button {
+  background:none;
+  border:0;
+  color:var(--muted);
+  font:inherit;
+  font-weight:700;
+  cursor:pointer;
+  padding:27px 0 23px;
+  border-bottom:3px solid transparent;
+}
+
+.dropdown-button:hover,
+.dropdown-button.active {
+  color:#fff;
+  border-color:var(--green);
+}
+
+.dropdown-menu {
+  display:none;
+  position:absolute;
+  top:70px;
+  right:0;
+  min-width:180px;
+  padding:8px;
+  background:#071426;
+  border:1px solid var(--border);
+  border-radius:8px;
+  box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  display:block;
+}
+
+.dropdown-menu a {
+  display:block;
+  padding:12px 14px;
+  border:0;
+  border-radius:6px;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a.active {
+  background:var(--navy2);
+  color:#fff;
+}
+
+.rules-container {
+  display:grid;
+  gap:18px;
+  margin-top:30px;
+}
+
+.rule-section {
+  padding:25px;
+}
+
+.rule-section h2 {
+  margin-top:0;
+  color:#fff;
+}
+
+.rule-section p {
+  color:var(--muted);
+  line-height:1.7;
+}
+
+
+/* Mobile dropdown */
+
+@media(max-width:760px) {
+
+  .nav-dropdown {
+    display:block;
+  }
+
+  .dropdown-button {
+    width:100%;
+    text-align:left;
+    padding:13px 0;
+    border-bottom:1px solid var(--border);
+  }
+
+  .dropdown-menu {
+    display:block;
+    position:static;
+    min-width:0;
+    padding:0 0 0 15px;
+    background:none;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+  }
+
+  .dropdown-menu a {
+    padding:11px 0;
+  }
+}
+/* =========================
+   COMMITTEE PAGE
+   ========================= */
+
+.committee-grid {
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:18px;
+  margin-top:30px;
+}
+
+.committee-card {
+  padding:24px;
+}
+
+.committee-role {
+  display:block;
+  margin-bottom:8px;
+  color:var(--green);
+  font-size:.85rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.committee-card h2 {
+  margin:0;
+  color:#fff;
+  font-size:1.35rem;
+}
+
+@media(max-width:760px) {
+  .committee-grid {
+    grid-template-columns:1fr;
+  }
+}
