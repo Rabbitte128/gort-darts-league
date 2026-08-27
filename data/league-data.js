@@ -270,7 +270,7 @@ const LEAGUE_DATA = {
       },
       // Week 17
       {
-        id: 61, week: 17, date: "19 Mar 2026", time: "7 pm", away: "Final", home: "Final",
+        id: 61, week: 17, date: "27 Mar 2026", time: "7 pm", away: "Final", home: "Final",
         hs: null, as: null
       }
     ]
