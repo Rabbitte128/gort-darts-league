@@ -8,26 +8,26 @@ const LEAGUE_DATA = {
       "Hennelly's A",
       "Hennelly's B",
       "Mullins' A",
-      "The Auld Triangle",
+      "TBC",
       "Walsh's A"
     ],
     fixtures: [
       // Week 1
       {
         id: 1, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "Dicey's A", away: "Dicey's B",
-        hs: 9, as: 0
+        hs: null, as: null
       },
       {
         id: 2, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "Hennelly's A", away: "Hennelly's B",
-        hs: 3, as: 6
+        hs: null, as: null
       },
       {
         id: 3, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "Mullins' A", away: "Walsh's A",
-        hs: 4, as: 5
+        hs: null, as: null
       },
       {
-        id: 4, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "The Auld Triangle", away: "Bradley's A",
-        hs: 4, as: 5
+        id: 4, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "TBC", away: "Bradley's A",
+        hs: null, as: null
       },
       // Week 2
       {
@@ -35,7 +35,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 6, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "Hennelly's B", away: "The Auld Triangle",
+        id: 6, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "Hennelly's B", away: "TBC",
         hs: null, as: null
       },
       {
@@ -52,7 +52,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 10, week: 3, date: "23 Oct 2026", time: "9:30 pm", home: "Bradley's A", away: "Hennelly's A",
+        id: 10, week: 3, date: "23 Oct 2026", time: "9:30 pm", home: "Dicey's B", away: "Hennelly's B",
         hs: null, as: null
       },
       {
@@ -60,9 +60,9 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 12, week: 3, date: "23 Oct 2026", time: "9:30 pm", home: "Walsh's A", away: "The Auld Triangle",
+        id: 12, week: 3, date: "23 Oct 2026", time: "9:30 pm", home: "Walsh's A", away: "TBC",
         hs: null, as: null
-      }
+      },
     ]
 
   }
@@ -75,11 +75,11 @@ const LEAGUE_DATA = {
       "Hennelly's C",
       "McCarthy's",
       "Mullins B",
-      "O'Donnells B",
+//      "O'Donnells B",
       "The Lady Gregory",
       "The Ledger Bar",
       "Walsh's B",
-      "O'Donnell's C"
+//      "O'Donnell's C"
     ],
     fixtures: [
       // Week 1
