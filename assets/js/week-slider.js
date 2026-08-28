@@ -45,25 +45,36 @@ function renderFixtureSlider(league, leagueName, containerSelector) {
             <p>${date}</p>
           </div>
 
-          <button
-            id="next-week"
-            class="week-arrow"
-            ${currentIndex === weeks.length - 1 ? "disabled" : ""}
-            aria-label="Next week"
-          >
-            &#10095;
-          </button>
+          <div class="week-nav-right">
+
+            <button
+              id="next-week"
+              class="week-arrow"
+              ${currentIndex === weeks.length - 1 ? "disabled" : ""}
+              aria-label="Next week"
+            >
+              &#10095;
+            </button>
+
+            <button
+              id="last-week"
+              class="week-arrow week-arrow-double"
+              ${currentIndex === weeks.length - 1 ? "disabled" : ""}
+              aria-label="Jump to last week"
+            >
+              &#10095;&#10095;
+            </button>
+
+          </div>
 
         </div>
 
         <div class="card-grid">
           ${fixtureCards(fixtures, leagueName)}
         </div>
-
         <div class="week-counter">
-          ${currentIndex + 1} / ${weeks.length}
+          <span>${currentIndex + 1} / ${weeks.length}</span>
         </div>
-
       </div>
     `;
 
@@ -84,7 +95,13 @@ function renderFixtureSlider(league, leagueName, containerSelector) {
           renderWeek();
         }
       });
-  }
+      document
+        .querySelector("#last-week")
+        .addEventListener("click", () => {
+          currentIndex = weeks.length - 1;
+          renderWeek();
+        });
+        }
 
   renderWeek();
 }
@@ -147,7 +164,6 @@ function renderResultsSlider(league, leagueName, containerSelector) {
             <h2>Week ${currentWeek}</h2>
             <p>${date}</p>
           </div>
-
           <button
             id="next-week"
             class="week-arrow"
@@ -156,9 +172,6 @@ function renderResultsSlider(league, leagueName, containerSelector) {
           >
             &#10095;
           </button>
-
-        </div>
-
         <div class="card-grid">
           ${resultCards(results, leagueName)}
         </div>

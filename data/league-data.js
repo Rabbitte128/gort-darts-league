@@ -14,7 +14,7 @@ const LEAGUE_DATA = {
     fixtures: [
       // Week 1
       {
-        id: 1, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "Dicey's A", away: "Dicey's B",
+        id: 1, week: 1, date: "9 Oct 2026", time: "9:30 pm", away: "Dicey's A", home: "Dicey's B",
         hs: null, as: null
       },
       {
@@ -131,7 +131,7 @@ const LEAGUE_DATA = {
         id: 28, week: 7, date: "4 Dec 2026", time: "9:30 pm", home: "Dicey's A", away: "Bradley's A",
         hs: null, as: null
       },
-      // Week 8
+      // Week 8 R1
       {
         id: 29, week: 8, date: "11 Dec 2026", time: "9:30 pm", home: "Dicey's A", away: "Dicey's B",
         hs: null, as: null
