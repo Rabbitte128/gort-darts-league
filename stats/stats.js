@@ -38,10 +38,5 @@ document.addEventListener("DOMContentLoaded", () => {
         <h2>🔥 Highest Checkouts</h2>
         ${leaderboard(s.checkouts, "score")}
       </article>
-    </div>
-
-    <aside class="notice">
-      <strong>Prototype data</strong>
-      <p>These player statistics are placeholders.</p>
-    </aside>`;
+    </div>`;
 });
