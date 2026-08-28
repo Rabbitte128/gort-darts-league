@@ -493,31 +493,36 @@ function fixtureCards(matches, league) {
 
 }
 function renderStandings(rows) {
-  return `<div class="table-wrap"><table><thead><tr><th>#</th><th>Team</th><th>P</th><th>W</th><th>L</th><th>+/-</th><th>Pts</th></tr></thead><tbody>${
-    rows.map((r, i) => `<tr><td>${
-      i + 1
-    }
-    </td><td><strong>${
-      r.team
-    }
-    </strong></td><td>${
-      r.p
-    }
-    </td><td>${
-      r.w
-    }
-    </td><td>${
-      r.l
-    }
-    </td><td>${
-      r.for-r.against
-    }
-    </td><td><strong>${
-      r.pts
-    }
-    </strong></td></tr>`).join("")
-  }
-  </tbody></table></div>`;
+  return `<div class="table-wrap">
+    <table class="standings-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Team</th>
+          <th class="points-column">Pts</th>
+          <th>P</th>
+          <th>W</th>
+          <th>L</th>
+          <th>+/-</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${
+          rows.map((r, i) => `
+            <tr>
+              <td>${i + 1}</td>
+              <td><strong>${r.team}</strong></td>
+              <td class="points-column"><strong>${r.pts}</strong></td>
+              <td>${r.p}</td>
+              <td>${r.w}</td>
+              <td>${r.l}</td>
+              <td>${r.for - r.against}</td>
+            </tr>
+          `).join("")
+        }
+      </tbody>
+    </table>
+  </div>`;
 
 }
 document.addEventListener("DOMContentLoaded", setupMenu);
