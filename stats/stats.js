@@ -38,5 +38,5 @@ document.addEventListener("DOMContentLoaded", () => {
         <h2>🔥 Highest Checkouts</h2>
         ${leaderboard(s.checkouts, "score")}
       </article>
-    </div>
+    </div>`;
 });
