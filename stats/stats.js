@@ -39,9 +39,4 @@ document.addEventListener("DOMContentLoaded", () => {
         ${leaderboard(s.checkouts, "score")}
       </article>
     </div>
-
-    <aside class="notice">
-      <strong>Prototype data</strong>
-      <p>These player statistics are placeholders.</p>
-    </aside>`;
 });
