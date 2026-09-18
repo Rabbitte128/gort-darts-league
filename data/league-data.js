@@ -511,7 +511,10 @@ function renderStandings(rows) {
           rows.map((r, i) => `
             <tr>
               <td>${i + 1}</td>
-              <td><strong>${r.team}</strong></td>
+              <td>${r.team === "TBC"
+                ? `<strong>${r.team}</strong>`
+                : `<a class="team-table-link" href="../teams/team.html?team=${encodeURIComponent(r.team)}"><strong>${r.team}</strong></a>`
+              }</td>
               <td class="points-column"><strong>${r.pts}</strong></td>
               <td>${r.p}</td>
               <td>${r.w}</td>

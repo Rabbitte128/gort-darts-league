@@ -869,3 +869,241 @@ footer span {
     font-weight: 800;
   }
 }
+
+/* Team profile pages */
+.team-table-link {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(240, 188, 46, .45);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.team-table-link:hover,
+.team-table-link:focus-visible {
+  color: var(--gold);
+  text-decoration-color: var(--gold);
+}
+
+.team-title {
+  padding-bottom: 18px;
+}
+
+.team-established {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.team-back-link {
+  display: inline-block;
+  margin: 0 0 22px;
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.team-profile-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.team-about p,
+.section-intro,
+.team-empty {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.team-squad,
+.team-individual-stats {
+  margin-top: 18px;
+}
+
+.team-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.team-section-heading span {
+  color: var(--muted);
+  font-size: .8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.team-player-list,
+.honours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.team-player-card {
+  display: grid;
+  grid-template-columns: 36px minmax(150px, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+
+.player-number {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #062a2b;
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.player-details small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+}
+
+.player-stat-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.stat-badge {
+  padding: 6px 9px;
+  border: 1px solid rgba(240, 188, 46, .3);
+  border-radius: 999px;
+  background: rgba(240, 188, 46, .07);
+  color: var(--gold);
+  font-size: .78rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.honours-list li,
+.team-stat-summary > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+}
+
+.honours-list span,
+.team-stat-summary span {
+  color: var(--gold);
+  font-weight: 800;
+}
+
+@media (max-width: 760px) {
+  .team-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-player-card {
+    grid-template-columns: 32px 1fr;
+  }
+
+  .player-stat-badges {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+}
+
+
+/* Team current-season summary */
+.season-summary {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.season-stat {
+  padding: 16px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.season-stat strong {
+  display: block;
+  color: var(--gold);
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.season-stat span {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.season-form-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.team-form {
+  display: flex;
+  gap: 7px;
+}
+
+.form-result {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  font-size: .78rem;
+  font-weight: 900;
+}
+
+.form-w { background: #25834a; }
+.form-l { background: #b63c3c; }
+.form-d { background: #777; }
+
+.team-form-pending {
+  margin: 0;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+@media (max-width: 480px) {
+  .season-summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .season-stat {
+    padding: 13px 6px;
+  }
+
+  .season-stat strong {
+    font-size: 1.35rem;
+  }
+
+  .season-form-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Let Current Season use the full row when there is no Roll of Honour */
+.team-profile-grid > article:only-child {
+  grid-column: 1 / -1;
+}
