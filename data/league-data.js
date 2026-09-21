@@ -8,64 +8,63 @@ const LEAGUE_DATA = {
       "Hennelly's A",
       "Hennelly's B",
       "Mullins' A",
-      "TBC",
       "Walsh's A"
     ],
     fixtures: [
       // Week 1
       {
-        id: 1, week: 1, date: "9 Oct 2026", time: "9:30 pm", away: "Dicey's A", home: "Dicey's B",
+        id: 1, week: 1, date: "16 Oct 2026", time: "9:30 pm", away: "Dicey's A", home: "Dicey's B",
         hs: null, as: null
       },
       {
-        id: 2, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "Hennelly's A", away: "Hennelly's B",
+        id: 2, week: 1, date: "16 Oct 2026", time: "9:30 pm", home: "Hennelly's A", away: "Hennelly's B",
         hs: null, as: null
       },
       {
-        id: 3, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "Walsh's A", away: "TBC",
+        id: 3, week: 1, date: "16 Oct 2026", time: "9:30 pm", home: "Walsh's A", away: "BYE",
         hs: null, as: null
       },
       {
-        id: 4, week: 1, date: "9 Oct 2026", time: "9:30 pm", away: "Mullins' A", home: "Bradley's A",
+        id: 4, week: 1, date: "16 Oct 2026", time: "9:30 pm", away: "Mullins' A", home: "Bradley's A",
         hs: null, as: null
       },
       // Week 2
       {
-        id: 5, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "Hennelly's A", away: "TBC",
+        id: 5, week: 2, date: "30 Oct 2026", time: "9:30 pm", home: "Hennelly's A", away: "BYE",
         hs: null, as: null
       },
       {
-        id: 6, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "Walsh's A", away: "Bradley's A",
+        id: 6, week: 2, date: "30 Oct 2026", time: "9:30 pm", home: "Walsh's A", away: "Bradley's A",
         hs: null, as: null
       },
       {
-        id: 7, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "Dicey's A", away: "Hennelly's B",
+        id: 7, week: 2, date: "30 Oct 2026", time: "9:30 pm", home: "Dicey's A", away: "Hennelly's B",
         hs: null, as: null
       },
       {
-        id: 8, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "Mullins' A", away: "Dicey's B",
+        id: 8, week: 2, date: "30 Oct 2026", time: "9:30 pm", home: "Mullins' A", away: "Dicey's B",
         hs: null, as: null
       },
       // Week 3
       {
-        id: 9, week: 3, date: "23 Oct 2026", time: "9:30 pm", home: "TBC", away: "Bradley's A",
+        id: 9, week: 3, date: "06 Nov 2026", time: "9:30 pm", home: "BYE", away: "Bradley's A",
         hs: null, as: null
       },
       {
-        id: 10, week: 3, date: "23 Oct 2026", time: "9:30 pm", away: "Hennelly's A", home: "Dicey's A",
+        id: 10, week: 3, date: "06 Nov 2026", time: "9:30 pm", away: "Hennelly's A", home: "Dicey's A",
         hs: null, as: null
       },
       {
-        id: 11, week: 3, date: "23 Oct 2026", time: "9:30 pm", away: "Dicey's B", home: "Walsh's A",
+        id: 11, week: 3, date: "06 Nov 2026", time: "9:30 pm", away: "Dicey's B", home: "Walsh's A",
         hs: null, as: null
       },
       {
-        id: 12, week: 3, date: "23 Oct 2026", time: "9:30 pm", away: "Mullins' A", away: "Hennelly's B",
+        id: 12, week: 3, date: "06 Nov 2026", time: "9:30 pm", away: "Mullins' A", away: "Hennelly's B",
         hs: null, as: null
       },
       // Week 4
       {
-        id: 13, week: 4, date: "13 Nov 2026", time: "9:30 pm", home: "TBC", away: "Dicey's A",
+        id: 13, week: 4, date: "13 Nov 2026", time: "9:30 pm", home: "BYE", away: "Dicey's A",
         hs: null, as: null
       },
       {
@@ -148,38 +147,38 @@ const LEAGUE_DATA = {
         id: 32, week: 8, date: "11 Dec 2026", time: "9:30 pm", home: "Mullins' A", away: "Bradley's A",
         hs: null, as: null
       },
-      // Week 9
+      // Week 9 R2
       {
-        id: 33, week: 9, date: "8 Jan 2026", time: "9:30 pm", away: "Hennelly's A", home: "TBC",
+        id: 33, week: 9, date: "18 Dec 2026", time: "9:30 pm", away: "Hennelly's A", home: "TBC",
         hs: null, as: null
       },
       {
-        id: 34, week: 9, date: "8 Jan 2026", time: "9:30 pm", away: "Walsh's A", home: "Bradley's A",
+        id: 34, week: 9, date: "18 Dec 2026", time: "9:30 pm", away: "Walsh's A", home: "Bradley's A",
         hs: null, as: null
       },
       {
-        id: 35, week: 9, date: "8 Jan 2026", time: "9:30 pm", away: "Dicey's A", home: "Hennelly's B",
+        id: 35, week: 9, date: "18 Dec 2026", time: "9:30 pm", away: "Dicey's A", home: "Hennelly's B",
         hs: null, as: null
       },
       {
-        id: 36, week: 9, date: "8 Jan 2026", time: "9:30 pm", away: "Mullins' A", home: "Dicey's B",
+        id: 36, week: 9, date: "18 Dec 2026", time: "9:30 pm", away: "Mullins' A", home: "Dicey's B",
         hs: null, as: null
       },
       // Week 10 R3
       {
-        id: 37, week: 10, date: "15 Jan 2026", time: "9:30 pm", away: "TBC", home: "Bradley's A",
+        id: 37, week: 10, date: "08 Jan 2026", time: "9:30 pm", away: "TBC", home: "Bradley's A",
         hs: null, as: null
       },
       {
-        id: 38, week: 10, date: "15 Jan 2026", time: "9:30 pm", home: "Hennelly's A", away: "Dicey's A",
+        id: 38, week: 10, date: "08 Jan 2026", time: "9:30 pm", home: "Hennelly's A", away: "Dicey's A",
         hs: null, as: null
       },
       {
-        id: 39, week: 10, date: "15 Jan 2026", time: "9:30 pm", home: "Dicey's B", away: "Walsh's A",
+        id: 39, week: 10, date: "08 Jan 2026", time: "9:30 pm", home: "Dicey's B", away: "Walsh's A",
         hs: null, as: null
       },
       {
-        id: 40, week: 10, date: "15 Jan 2026", time: "9:30 pm", home: "Mullins' A", away: "Hennelly's B",
+        id: 40, week: 10, date: "08 Jan 2026", time: "9:30 pm", home: "Mullins' A", away: "Hennelly's B",
         hs: null, as: null
       },
       // Week 11 R4
@@ -199,21 +198,38 @@ const LEAGUE_DATA = {
         id: 44, week: 11, date: "22 Jan 2026", time: "9:30 pm", away: "Hennelly's B", home: "Walsh's A",
         hs: null, as: null
       },
+      // Week BUDDY BURKE
+      {
+        id: 45, week: "Buddy Burke Cup Quarter finals", date: "29 Jan 2026", time: "9:30 pm", away: "TBC", home: "TBC",
+        hs: null, as: null
+      },
+      {
+        id: 46, week: "Buddy Burke Cup Quarter finals", date: "29 Jan 2026", time: "9:30 pm", away: "TBC", home: "TBC",
+        hs: null, as: null
+      },
+      {
+        id: 47, week: "Buddy Burke Cup Quarter finals", date: "29 Jan 2026", time: "9:30 pm", home: "TBC", away: "TBC",
+        hs: null, as: null
+      },
+      {
+        id: 48, week: "Buddy Burke Cup Quarter finals", date: "29 Jan 2026", time: "9:30 pm", home: "TBC", away: "TBC",
+        hs: null, as: null
+      },
       // Week 12 R5
       {
-        id: 45, week: 12, date: "29 Jan 2026", time: "9:30 pm", away: "Dicey's B", home: "TBC",
+        id: 45, week: 12, date: "05 Feb 2026", time: "9:30 pm", away: "Dicey's B", home: "TBC",
         hs: null, as: null
       },
       {
-        id: 46, week: 12, date: "29 Jan 2026", time: "9:30 pm", away: "Mullins' A", home: "Dicey's A",
+        id: 46, week: 12, date: "05 Feb 2026", time: "9:30 pm", away: "Mullins' A", home: "Dicey's A",
         hs: null, as: null
       },
       {
-        id: 47, week: 12, date: "29 Jan 2026", time: "9:30 pm", home: "Hennelly's B", away: "Bradley's A",
+        id: 47, week: 12, date: "05 Feb 2026", time: "9:30 pm", home: "Hennelly's B", away: "Bradley's A",
         hs: null, as: null
       },
       {
-        id: 48, week: 12, date: "29 Jan 2026", time: "9:30 pm", home: "Walsh's A", away: "Hennelly's A",
+        id: 48, week: 12, date: "05 Feb 2026", time: "9:30 pm", home: "Walsh's A", away: "Hennelly's A",
         hs: null, as: null
       },
       // Week 13
@@ -231,6 +247,15 @@ const LEAGUE_DATA = {
       },
       {
         id: 52, week: 13, date: "19 Feb 2026", time: "9:30 pm", home: "Hennelly's A", away: "Bradley's A",
+        hs: null, as: null
+      },
+      // Week BUDDY BURKE
+      {
+        id: 45, week: "Buddy Burke Cup Semi finals", date: "29 Jan 2026", time: "9:30 pm", away: "TBC", home: "TBC",
+        hs: null, as: null
+      },
+      {
+        id: 46, week: "Buddy Burke Cup Semi finals", date: "29 Jan 2026", time: "9:30 pm", away: "TBC", home: "TBC",
         hs: null, as: null
       },
       // Week 14
@@ -285,11 +310,11 @@ const LEAGUE_DATA = {
       "Hennelly's C",
       "McCarthy's",
       "Mullins B",
+      "O'Donnell's A",
       "O'Donnells B",
       "The Lady Gregory",
       "The Ledger Bar",
-      "Walsh's B",
-      "O'Donnell's C"
+      "Walsh's B"
     ],
     fixtures: [
       // Week 1
@@ -318,43 +343,45 @@ const LEAGUE_DATA = {
   }
   ,
   stats: {
-    oneEighties: [{
-      player: "John Cahill", team: "Walsh's A", total: 3
-    }
-    , {
-      player: "Declan Fuery", team: "Bradley's A", total: 2
-    }
-    , {
-      player: "Adrian Finn", team: "Walsh's B", total: 2
-    }
-    , {
-      player: "Craig Molloy", team: "Dicey's Bar", total: 2
-    }
-    , {
-      player: "Pete Cosgrove", team: "Bradley's A", total: 2
-    }
-    , {
-      player: "Jamie Caughlan", team: "Walsh's A", total: 2
-    }
-    , {
-      player: "Brendan Daly", team: "Mullins' A", total: 2
-    }
-    , {
-      player: "Michael C Rabbitte", team: "Mullins' A", total: 1
-    }
+    oneEighties: [
+    //   {
+    //   player: "John Cahill", team: "Walsh's A", total: 3
+    // }
+    // , {
+    //   player: "Declan Fuery", team: "Bradley's A", total: 2
+    // }
+    // , {
+    //   player: "Adrian Finn", team: "Walsh's B", total: 2
+    // }
+    // , {
+    //   player: "Craig Molloy", team: "Dicey's Bar", total: 2
+    // }
+    // , {
+    //   player: "Pete Cosgrove", team: "Bradley's A", total: 2
+    // }
+    // , {
+    //   player: "Jamie Caughlan", team: "Walsh's A", total: 2
+    // }
+    // , {
+    //   player: "Brendan Daly", team: "Mullins' A", total: 2
+    // }
+    // , {
+    //   player: "Michael C Rabbitte", team: "Mullins' A", total: 1
+    // }
   ],
-  checkouts: [{
-    player: "Padraic Curley", team: "Hennelly's A", score: 170
-  }
-  , {
-    player: "Jamie Caughlan", team: "Walsh's A", score: 164
-  }
-  , {
-    player: "Greg McManus", team: "Walsh's B", score: 158
-  }
-  , {
-    player: "Padraic Curley", team: "Hennelly's A", score: 156
-  }
+  checkouts: [
+//    {
+  //   player: "Padraic Curley", team: "Hennelly's A", score: 170
+  // }
+  // , {
+  //   player: "Jamie Caughlan", team: "Walsh's A", score: 164
+  // }
+  // , {
+  //   player: "Greg McManus", team: "Walsh's B", score: 158
+  // }
+  // , {
+  //   player: "Padraic Curley", team: "Hennelly's A", score: 156
+  // }
 ]
 
 }
