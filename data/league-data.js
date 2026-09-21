@@ -13,289 +13,289 @@ const LEAGUE_DATA = {
     fixtures: [
       // Week 1
       {
-        id: 1, week: 1, date: "16 Oct 2026", time: "9:30 pm", away: "Dicey's A", home: "Dicey's B",
+        id: 1, week: 1, date: "16 Oct 2026", time: "9:30 pm", home: "Bradley's A", away: "Mullins' A",
         hs: null, as: null
       },
       {
-        id: 2, week: 1, date: "16 Oct 2026", time: "9:30 pm", home: "Hennelly's A", away: "Hennelly's B",
+        id: 2, week: 1, date: "16 Oct 2026", time: "9:30 pm", home: "Dicey's A", away: "Dicey's B",
         hs: null, as: null
       },
       {
-        id: 3, week: 1, date: "16 Oct 2026", time: "9:30 pm", home: "Walsh's A", away: "BYE",
+        id: 3, week: 1, date: "16 Oct 2026", time: "9:30 pm", home: "Walsh's A", away: "Hennelly's A",
         hs: null, as: null
       },
       {
-        id: 4, week: 1, date: "16 Oct 2026", time: "9:30 pm", away: "Mullins' A", home: "Bradley's A",
+        id: 4, week: 1, date: "16 Oct 2026", time: "9:30 pm", home: "Hennelly's B", away: "BYE",
         hs: null, as: null
       },
       // Week 2
       {
-        id: 5, week: 2, date: "30 Oct 2026", time: "9:30 pm", home: "Hennelly's A", away: "BYE",
+        id: 5, week: 2, date: "30 Oct 2026", time: "9:30 pm", home: "Hennelly's B", away: "Bradley's A",
         hs: null, as: null
       },
       {
-        id: 6, week: 2, date: "30 Oct 2026", time: "9:30 pm", home: "Walsh's A", away: "Bradley's A",
+        id: 6, week: 2, date: "30 Oct 2026", time: "9:30 pm", home: "Mullins' A", away: "Hennelly's A",
         hs: null, as: null
       },
       {
-        id: 7, week: 2, date: "30 Oct 2026", time: "9:30 pm", home: "Dicey's A", away: "Hennelly's B",
+        id: 7, week: 2, date: "30 Oct 2026", time: "9:30 pm", home: "Walsh's A", away: "Dicey's B",
         hs: null, as: null
       },
       {
-        id: 8, week: 2, date: "30 Oct 2026", time: "9:30 pm", home: "Mullins' A", away: "Dicey's B",
+        id: 8, week: 2, date: "30 Oct 2026", time: "9:30 pm", home: "Dicey's A", away: "BYE",
         hs: null, as: null
       },
       // Week 3
       {
-        id: 9, week: 3, date: "06 Nov 2026", time: "9:30 pm", home: "BYE", away: "Bradley's A",
+        id: 9, week: 3, date: "06 Nov 2026", time: "9:30 pm", home: "Dicey's A", away: "Hennelly's B",
         hs: null, as: null
       },
       {
-        id: 10, week: 3, date: "06 Nov 2026", time: "9:30 pm", away: "Hennelly's A", home: "Dicey's A",
+        id: 10, week: 3, date: "06 Nov 2026", time: "9:30 pm", home: "Bradley's A", away: "Hennelly's A",
         hs: null, as: null
       },
       {
-        id: 11, week: 3, date: "06 Nov 2026", time: "9:30 pm", away: "Dicey's B", home: "Walsh's A",
+        id: 11, week: 3, date: "06 Nov 2026", time: "9:30 pm", home: "Mullins' A", away: "Dicey's B",
         hs: null, as: null
       },
       {
-        id: 12, week: 3, date: "06 Nov 2026", time: "9:30 pm", away: "Mullins' A", away: "Hennelly's B",
+        id: 12, week: 3, date: "06 Nov 2026", time: "9:30 pm", home: "Walsh' A", away: "BYE",
         hs: null, as: null
       },
       // Week 4
       {
-        id: 13, week: 4, date: "13 Nov 2026", time: "9:30 pm", home: "BYE", away: "Dicey's A",
+        id: 13, week: 4, date: "13 Nov 2026", time: "9:30 pm", home: "Hennelly's A", away: "Hennelly's B",
         hs: null, as: null
       },
       {
-        id: 14, week: 4, date: "13 Nov 2026", time: "9:30 pm", home: "Dicey's B", away: "Bradley's A",
+        id: 14, week: 4, date: "13 Nov 2026", time: "9:30 pm", home: "Walsh's A", away: "Dicey's A",
         hs: null, as: null
       },
       {
-        id: 15, week: 4, date: "13 Nov 2026", time: "9:30 pm", home: "Mullins' A", away: "Hennelly's A",
+        id: 15, week: 4, date: "13 Nov 2026", time: "9:30 pm", home: "Dicey's B", away: "Bradley's A",
         hs: null, as: null
       },
       {
-        id: 16, week: 4, date: "13 Nov 2026", time: "9:30 pm", home: "Hennelly's B", away: "Walsh's A",
+        id: 16, week: 4, date: "13 Nov 2026", time: "9:30 pm", home: "Mullins' A", away: "BYE",
         hs: null, as: null
       },
       // Week 5
       {
-        id: 17, week: 5, date: "20 Nov 2026", time: "9:30 pm", home: "Dicey's B", away: "TBC",
+        id: 17, week: 5, date: "20 Nov 2026", time: "9:30 pm", home: "Hennelly's B", away: "Walsh's A",
         hs: null, as: null
       },
       {
-        id: 18, week: 5, date: "20 Nov 2026", time: "9:30 pm", home: "Mullins' A", away: "Dicey's A",
+        id: 18, week: 5, date: "20 Nov 2026", time: "9:30 pm", home: "Dicey's B", away: "Hennelly's A",
         hs: null, as: null
       },
       {
-        id: 19, week: 5, date: "20 Nov 2026", time: "9:30 pm", away: "Hennelly's B", home: "Bradley's A",
+        id: 19, week: 5, date: "20 Nov 2026", time: "9:30 pm", home: "Mullins' A", away: "Dicey's A",
         hs: null, as: null
       },
       {
-        id: 20, week: 5, date: "20 Nov 2026", time: "9:30 pm", away: "Walsh's A", home: "Hennelly's A",
+        id: 20, week: 5, date: "20 Nov 2026", time: "9:30 pm", home: "Bradley's A", away: "BYE",
         hs: null, as: null
       },
       // Week 6
       {
-        id: 21, week: 6, date: "27 Nov 2026", time: "9:30 pm", away: "Mullins' A", home: "TBC",
+        id: 21, week: 6, date: "27 Nov 2026", time: "9:30 pm", home: "Dicey's B", away: "Hennelly's B",
         hs: null, as: null
       },
       {
-        id: 22, week: 6, date: "27 Nov 2026", time: "9:30 pm", away: "Dicey's B", home: "Hennelly's B",
+        id: 22, week: 6, date: "27 Nov 2026", time: "9:30 pm", home: "Walsh's A", away: "Mullins' A",
         hs: null, as: null
       },
       {
-        id: 23, week: 6, date: "27 Nov 2026", time: "9:30 pm", away: "Walsh's A", home: "Dicey's A",
+        id: 23, week: 6, date: "27 Nov 2026", time: "9:30 pm", home: "Bradley's A", away: "Dicey's A",
         hs: null, as: null
       },
       {
-        id: 24, week: 6, date: "27 Nov 2026", time: "9:30 pm", away: "Hennelly's A", home: "Bradley's A",
+        id: 24, week: 6, date: "27 Nov 2026", time: "9:30 pm", home: "Hennelly's A", away: "BYE",
         hs: null, as: null
       },
       // Week 7
       {
-        id: 25, week: 7, date: "4 Dec 2026", time: "9:30 pm", home: "TBC", away: "Hennelly's B",
+        id: 25, week: 7, date: "4 Dec 2026", time: "9:30 pm", home: "Hennelly's B", away: "Mullins' A",
         hs: null, as: null
       },
       {
-        id: 26, week: 7, date: "4 Dec 2026", time: "9:30 pm", home: "Mullins' A", away: "Walsh's A",
+        id: 26, week: 7, date: "4 Dec 2026", time: "9:30 pm", home: "Dicey's A", away: "Hennelly's A",
         hs: null, as: null
       },
       {
-        id: 27, week: 7, date: "4 Dec 2026", time: "9:30 pm", home: "Hennelly's A", away: "Dicey's B",
+        id: 27, week: 7, date: "4 Dec 2026", time: "9:30 pm", home: "Walsh's A", away: "Bradley's A",
         hs: null, as: null
       },
       {
-        id: 28, week: 7, date: "4 Dec 2026", time: "9:30 pm", home: "Dicey's A", away: "Bradley's A",
+        id: 28, week: 7, date: "4 Dec 2026", time: "9:30 pm", home: "Dicey's B", away: "BYE",
         hs: null, as: null
       },
       // Week 8 R1
       {
-        id: 29, week: 8, date: "11 Dec 2026", time: "9:30 pm", home: "Dicey's A", away: "Dicey's B",
+        id: 29, week: 8, date: "11 Dec 2026", time: "9:30 pm", home: "Mullins' A", away: "Bradley's A",
         hs: null, as: null
       },
       {
-        id: 30, week: 8, date: "11 Dec 2026", time: "9:30 pm", away: "Hennelly's A", home: "Hennelly's B",
+        id: 30, week: 8, date: "11 Dec 2026", time: "9:30 pm", home: "Dicey's B", away: "Dicey's A",
         hs: null, as: null
       },
       {
-        id: 31, week: 8, date: "11 Dec 2026", time: "9:30 pm", away: "Walsh's A", home: "TBC",
+        id: 31, week: 8, date: "11 Dec 2026", time: "9:30 pm", home: "Hennelly's A", away: "Walsh's A",
         hs: null, as: null
       },
       {
-        id: 32, week: 8, date: "11 Dec 2026", time: "9:30 pm", home: "Mullins' A", away: "Bradley's A",
+        id: 32, week: 8, date: "11 Dec 2026", time: "9:30 pm", home: "Hennelly's B", away: "BYE",
         hs: null, as: null
       },
       // Week 9 R2
       {
-        id: 33, week: 9, date: "18 Dec 2026", time: "9:30 pm", away: "Hennelly's A", home: "TBC",
+        id: 33, week: 9, date: "18 Dec 2026", time: "9:30 pm", home: "Bradley's A", away: "Hennelly's B",
         hs: null, as: null
       },
       {
-        id: 34, week: 9, date: "18 Dec 2026", time: "9:30 pm", away: "Walsh's A", home: "Bradley's A",
+        id: 34, week: 9, date: "18 Dec 2026", time: "9:30 pm", home: "Hennelly's A", away: "Mullins' A",
         hs: null, as: null
       },
       {
-        id: 35, week: 9, date: "18 Dec 2026", time: "9:30 pm", away: "Dicey's A", home: "Hennelly's B",
+        id: 35, week: 9, date: "18 Dec 2026", time: "9:30 pm", home: "Walsh's A", away: "Dicey's B",
         hs: null, as: null
       },
       {
-        id: 36, week: 9, date: "18 Dec 2026", time: "9:30 pm", away: "Mullins' A", home: "Dicey's B",
+        id: 36, week: 9, date: "18 Dec 2026", time: "9:30 pm", home: "Dicey's A", away: "BYE",
         hs: null, as: null
       },
       // Week 10 R3
       {
-        id: 37, week: 10, date: "08 Jan 2026", time: "9:30 pm", away: "TBC", home: "Bradley's A",
+        id: 37, week: 10, date: "08 Jan 2026", time: "9:30 pm", home: "Dicey's A", away: "Hennelly's B",
         hs: null, as: null
       },
       {
-        id: 38, week: 10, date: "08 Jan 2026", time: "9:30 pm", home: "Hennelly's A", away: "Dicey's A",
+        id: 38, week: 10, date: "08 Jan 2026", time: "9:30 pm", home: "Hennelly's A", away: "Bradley's A",
         hs: null, as: null
       },
       {
-        id: 39, week: 10, date: "08 Jan 2026", time: "9:30 pm", home: "Dicey's B", away: "Walsh's A",
+        id: 39, week: 10, date: "08 Jan 2026", time: "9:30 pm", home: "Dicey's B", away: "Mullins' A",
         hs: null, as: null
       },
       {
-        id: 40, week: 10, date: "08 Jan 2026", time: "9:30 pm", home: "Mullins' A", away: "Hennelly's B",
+        id: 40, week: 10, date: "08 Jan 2026", time: "9:30 pm", home: "Walsh's A", away: "BYE",
         hs: null, as: null
       },
       // Week 11 R4
       {
-        id: 41, week: 11, date: "22 Jan 2026", time: "9:30 pm", away: "TBC", home: "Dicey's A",
+        id: 41, week: 11, date: "22 Jan 2026", time: "9:30 pm", home: "Hennelly's B", away: "Hennelly's A",
         hs: null, as: null
       },
       {
-        id: 42, week: 11, date: "22 Jan 2026", time: "9:30 pm", away: "Dicey's B", home: "Bradley's A",
+        id: 42, week: 11, date: "22 Jan 2026", time: "9:30 pm", home: "Dicey's A", away: "Walsh's A",
         hs: null, as: null
       },
       {
-        id: 43, week: 11, date: "22 Jan 2026", time: "9:30 pm", away: "Mullins' A", home: "Hennelly's A",
+        id: 43, week: 11, date: "22 Jan 2026", time: "9:30 pm", home: "Bradley's A", away: "Dicey's B",
         hs: null, as: null
       },
       {
-        id: 44, week: 11, date: "22 Jan 2026", time: "9:30 pm", away: "Hennelly's B", home: "Walsh's A",
+        id: 44, week: 11, date: "22 Jan 2026", time: "9:30 pm", home: "Mullins' A", away: "BYE",
         hs: null, as: null
       },
       // Week BUDDY BURKE
-      {
-        id: 45, week: "Buddy Burke Cup Quarter finals", date: "29 Jan 2026", time: "9:30 pm", away: "TBC", home: "TBC",
-        hs: null, as: null
-      },
-      {
-        id: 46, week: "Buddy Burke Cup Quarter finals", date: "29 Jan 2026", time: "9:30 pm", away: "TBC", home: "TBC",
-        hs: null, as: null
-      },
-      {
-        id: 47, week: "Buddy Burke Cup Quarter finals", date: "29 Jan 2026", time: "9:30 pm", home: "TBC", away: "TBC",
-        hs: null, as: null
-      },
-      {
-        id: 48, week: "Buddy Burke Cup Quarter finals", date: "29 Jan 2026", time: "9:30 pm", home: "TBC", away: "TBC",
-        hs: null, as: null
-      },
+      // {
+      //   id: 45, week: "Buddy Burke Cup Quarter finals", date: "29 Jan 2026", time: "9:30 pm", away: "TBC", home: "TBC",
+      //   hs: null, as: null
+      // },
+      // {
+      //   id: 46, week: "Buddy Burke Cup Quarter finals", date: "29 Jan 2026", time: "9:30 pm", away: "TBC", home: "TBC",
+      //   hs: null, as: null
+      // },
+      // {
+      //   id: 47, week: "Buddy Burke Cup Quarter finals", date: "29 Jan 2026", time: "9:30 pm", home: "TBC", away: "TBC",
+      //   hs: null, as: null
+      // },
+      // {
+      //   id: 48, week: "Buddy Burke Cup Quarter finals", date: "29 Jan 2026", time: "9:30 pm", home: "TBC", away: "TBC",
+      //   hs: null, as: null
+      // },
       // Week 12 R5
       {
-        id: 45, week: 12, date: "05 Feb 2026", time: "9:30 pm", away: "Dicey's B", home: "TBC",
+        id: 45, week: 12, date: "05 Feb 2026", time: "9:30 pm", home: "Mullins' A", away: "Hennelly's B",
         hs: null, as: null
       },
       {
-        id: 46, week: 12, date: "05 Feb 2026", time: "9:30 pm", away: "Mullins' A", home: "Dicey's A",
+        id: 46, week: 12, date: "05 Feb 2026", time: "9:30 pm", home: "Hennelly's A", away: "Dicey's A",
         hs: null, as: null
       },
       {
-        id: 47, week: 12, date: "05 Feb 2026", time: "9:30 pm", home: "Hennelly's B", away: "Bradley's A",
+        id: 47, week: 12, date: "05 Feb 2026", time: "9:30 pm", home: "Bradley's A", away: "Walsh's A",
         hs: null, as: null
       },
       {
-        id: 48, week: 12, date: "05 Feb 2026", time: "9:30 pm", home: "Walsh's A", away: "Hennelly's A",
+        id: 48, week: 12, date: "05 Feb 2026", time: "9:30 pm", home: "Dicey's B", away: "BYE",
         hs: null, as: null
       },
       // Week 13
       {
-        id: 49, week: 13, date: "19 Feb 2026", time: "9:30 pm", away: "Mullins' A", home: "TBC",
+        id: 49, week: 13, date: "19 Feb 2026", time: "9:30 pm", home: "Hennelly's B", away: "Dicey's B",
         hs: null, as: null
       },
       {
-        id: 50, week: 13, date: "19 Feb 2026", time: "9:30 pm", home: "Dicey's B", away: "Hennelly's B",
+        id: 50, week: 13, date: "19 Feb 2026", time: "9:30 pm", home: "Mullins' A", away: "Walsh's A",
         hs: null, as: null
       },
       {
-        id: 51, week: 13, date: "19 Feb 2026", time: "9:30 pm", home: "Walsh's A", away: "Dicey's A",
+        id: 51, week: 13, date: "19 Feb 2026", time: "9:30 pm", home: "Dicey's A", away: "Bradley's A",
         hs: null, as: null
       },
       {
-        id: 52, week: 13, date: "19 Feb 2026", time: "9:30 pm", home: "Hennelly's A", away: "Bradley's A",
+        id: 52, week: 13, date: "19 Feb 2026", time: "9:30 pm", home: "Hennelly's A", away: "BYE",
         hs: null, as: null
       },
       // Week BUDDY BURKE
-      {
-        id: 45, week: "Buddy Burke Cup Semi finals", date: "29 Jan 2026", time: "9:30 pm", away: "TBC", home: "TBC",
-        hs: null, as: null
-      },
-      {
-        id: 46, week: "Buddy Burke Cup Semi finals", date: "29 Jan 2026", time: "9:30 pm", away: "TBC", home: "TBC",
-        hs: null, as: null
-      },
+      // {
+      //   id: 45, week: "Buddy Burke Cup Semi finals", date: "29 Jan 2026", time: "9:30 pm", away: "TBC", home: "TBC",
+      //   hs: null, as: null
+      // },
+      // {
+      //   id: 46, week: "Buddy Burke Cup Semi finals", date: "29 Jan 2026", time: "9:30 pm", away: "TBC", home: "TBC",
+      //   hs: null, as: null
+      // },
       // Week 14
       {
-        id: 53, week: 14, date: "26 Feb 2026", time: "9:30 pm", away: "TBC", home: "Hennelly's B",
+        id: 53, week: 14, date: "26 Feb 2026", time: "9:30 pm", home: "Walsh's A", hawayome: "Hennelly's B",
         hs: null, as: null
       },
       {
-        id: 54, week: 14, date: "26 Feb 2026", time: "9:30 pm", away: "Mullins' A", home: "Walsh's A",
+        id: 54, week: 14, date: "26 Feb 2026", time: "9:30 pm", home: "Hennelly's A", away: "Dicey's B",
         hs: null, as: null
       },
       {
-        id: 55, week: 14, date: "26 Feb 2026", time: "9:30 pm", away: "Hennelly's A", home: "Dicey's B",
+        id: 55, week: 14, date: "26 Feb 2026", time: "9:30 pm", home: "Dicey's A", away: "Mullins' A",
         hs: null, as: null
       },
       {
-        id: 56, week: 14, date: "26 Feb 2026", time: "9:30 pm", away: "Dicey's A", home: "Bradley's A",
+        id: 56, week: 14, date: "26 Feb 2026", time: "9:30 pm", home: "Bradley's A", away: "BYE",
         hs: null, as: null
       },
       // Week 15
       {
-        id: 57, week: 15, date: "12 Mar 2026", time: "9:30 pm", away: "Semi-Final 1", home: "Semi-Final 1",
+        id: 57, week: 15, date: "12 Mar 2026", time: "9:30 pm", home: "Semi-Final 1", away: "Semi-Final 1",
         hs: null, as: null
       },
       {
-        id: 58, week: 15, date: "12 Mar 2026", time: "9:30 pm", away: "Semi-Final 1", home: "Semi-Final 1",
+        id: 58, week: 15, date: "12 Mar 2026", time: "9:30 pm", home: "Semi-Final 1", away: "Semi-Final 1",
         hs: null, as: null
       },
       // Week 16
       {
-        id: 59, week: 16, date: "26 Mar 2026", time: "9:30 pm", away: "Semi-Final 2", home: "Semi-Final 2",
+        id: 59, week: 16, date: "26 Mar 2026", time: "9:30 pm", home: "Semi-Final 2", away: "Semi-Final 2",
         hs: null, as: null
       },
       {
-        id: 60, week: 16, date: "26 Mar 2026", time: "9:30 pm", away: "Semi-Final 2", home: "Semi-Final 2",
+        id: 60, week: 16, date: "26 Mar 2026", time: "9:30 pm", home: "Semi-Final 2", away: "Semi-Final 2",
         hs: null, as: null
       },
       // Week 17
       {
-        id: 61, week: 17, date: "10 Apr 2026", time: "7 pm", away: "Final", home: "Final",
+        id: 61, week: 17, date: "10 Apr 2026", time: "7 pm", home: "Final", away: "Final",
         hs: null, as: null
       }
     ]
@@ -319,23 +319,27 @@ const LEAGUE_DATA = {
     fixtures: [
       // Week 1
       {
-        id: 1, week: 1, date: "2 Oct 2026", time: "9:30 pm", home: "TBC", away: "TBC",
+        id: 62, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "The Lady Gregory", away: "The Ledger Bar",
         hs: null, as: null
       },
       {
-        id: 2, week: 1, date: "2 Oct 2026", time: "9:30 pm", home: "TBC", away: "TBC",
+        id: 63, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "McCarthy's", away: "Bradley's B",
         hs: null, as: null
       },
       {
-        id: 3, week: 1, date: "2 Oct 2026", time: "9:30 pm", home: "TBC", away: "TBC",
+        id: 64, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "Walsh's B", away: "O'Donnell's A",
         hs: null, as: null
       },
       {
-        id: 4, week: 1, date: "2 Oct 2026", time: "9:30 pm", home: "TBC", away: "TBC",
+        id: 66, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "Mullins B", away: "Harte's",
         hs: null, as: null
       },
       {
-        id: 5, week: 1, date: "2 Oct 2026", time: "9:30 pm", home: "TBC", away: "TBC",
+        id: 67, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "O'Donnells B", away: "BYE",
+        hs: null, as: null
+      },
+      {
+        id: 68, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "Hennelly's C", away: "BYE",
         hs: null, as: null
       }
     ]
