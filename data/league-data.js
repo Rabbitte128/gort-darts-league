@@ -341,7 +341,49 @@ const LEAGUE_DATA = {
       {
         id: 68, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "Hennelly's C", away: "BYE",
         hs: null, as: null
-      }
+      },
+      // -- Week 2 --------------------------------------------------------------------------------------------
+      {
+        id: 67, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "McCarthy's", away: "The Ledger Bar",
+        hs: null, as: null
+      },
+      {
+        id: 68, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "Bradley's B", away: "O'Donnells B",
+        hs: null, as: null
+      },
+      {
+        id: 69, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "Mullins B", away: "Walsh's B",
+        hs: null, as: null
+      },
+      {
+        id: 70, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "Harte's", away: "Hennelly's C",
+        hs: null, as: null
+      },
+      {
+        id: 71, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "The Lady Gregory", away: "O'Donnell's A",
+        hs: null, as: null
+      },
+      // -- Week 3 --------------------------------------------------------------------------------------------
+      {
+        id: 72, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "The Lady Gregory", away: "O'Donnells B",
+        hs: null, as: null
+      },
+      {
+        id: 73, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "The Ledger Bar", away: "Bradley's B",
+        hs: null, as: null
+      },
+      {
+        id: 74, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "O'Donnell's A", away: "Hennelly's C",
+        hs: null, as: null
+      },
+      {
+        id: 75, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "Walsh's B", away: "Harte's",
+        hs: null, as: null
+      },
+      {
+        id: 76, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "McCarthy's", away: "Mullins B",
+        hs: null, as: null
+      },
     ]
 
   }
