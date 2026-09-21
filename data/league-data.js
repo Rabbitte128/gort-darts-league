@@ -260,7 +260,7 @@ const LEAGUE_DATA = {
       // },
       // Week 14
       {
-        id: 53, week: 14, date: "26 Feb 2027", time: "9:30 pm", home: "Walsh's A", hawayome: "Hennelly's B",
+        id: 53, week: 14, date: "26 Feb 2027", time: "9:30 pm", home: "Walsh's A", away: "Hennelly's B",
         hs: null, as: null
       },
       {
