@@ -4,7 +4,7 @@ const TEAM_DATA = {
 //    honours: [{title: "A League", years: "2024"}, {title: "Buddy Burke Cup", years: "2024"},{title: "A League", years: "2023"}, {title: "A League", years: "2022"}] 
   },
   "Dicey's A": { league: "A League", established: "", about: "", 
-    players: ["Kieran Harte", "Kyle McCarth", "Darragh Darcy", "John King", "Donna Demansfield", "Mikey Daily", "Creg Molloy", "John Molloy"]
+    players: ["Kieran Harte", "Kyle McCarthy", "Darragh Darcy", "John King", "Donna Demansfield", "Mikey Daily", "Creg Molloy", "John Molloy", "Lorcan Devon"]
 //    honours: [{title: "B League", years: "2024"}, {title: "B Shield", years: "2019"}, {title: "B Shield", years: "2017"}] 
   },
   "Dicey's B": { league: "A League", established: "", about: "", 
