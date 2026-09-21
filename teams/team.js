@@ -83,6 +83,51 @@ function renderCurrentSeason(teamName, team) {
     </div>`;
 }
 
+function renderTeamFixtures(teamName, team) {
+  const league = getLeagueForTeam(team);
+
+  const fixtures = league.fixtures
+    .filter(match => match.home === teamName || match.away === teamName)
+    .sort((a, b) => a.week - b.week || a.id - b.id);
+
+  if (!fixtures.length) {
+    return `<p class="team-empty">Fixtures have not been added yet.</p>`;
+  }
+
+  return `
+    <div class="team-fixtures-list">
+      ${fixtures.map(match => {
+        const completed = match.hs !== null && match.as !== null;
+
+        return `
+          <div class="team-fixture-row">
+            <div class="team-fixture-info">
+              <span class="team-fixture-week">Week ${match.week}</span>
+              <span class="team-fixture-date">${escapeHtml(match.date)}</span>
+            </div>
+
+            <div class="team-fixture-match">
+              <span class="${match.home === teamName ? "team-fixture-current" : ""}">
+                ${escapeHtml(match.home)}
+              </span>
+
+              ${
+                completed
+                  ? `<strong class="team-fixture-score">${match.hs} - ${match.as}</strong>`
+                  : `<span class="team-fixture-vs">v</span>`
+              }
+
+              <span class="${match.away === teamName ? "team-fixture-current" : ""}">
+                ${escapeHtml(match.away)}
+              </span>
+            </div>
+          </div>
+        `;
+      }).join("")}
+    </div>
+  `;
+}
+
 function getPlayerStats(player, team) {
   const oneEighties = LEAGUE_DATA.stats.oneEighties
     .filter(row => row.team === team && row.player === player)
@@ -199,7 +244,13 @@ document.addEventListener("DOMContentLoaded", () => {
         ? `<ol class="team-player-list">${players.map((player, i) => renderPlayer(player, teamName, i)).join("")}</ol>`
         : `<p class="team-empty">Current player list to be added.</p>`}
     </section>
-
+        <section class="panel team-fixtures">
+      <div class="team-section-heading">
+        <h2>Fixtures</h2>
+        <span>2026-2027</span>
+      </div>
+      ${renderTeamFixtures(teamName, team)}
+    </section>
     ${hasIndividualStats ? `
       <section class="panel team-individual-stats">
         <h2>Individual Stats</h2>
