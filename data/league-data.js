@@ -166,36 +166,36 @@ const LEAGUE_DATA = {
       },
       // Week 10 R3
       {
-        id: 37, week: 10, date: "08 Jan 2026", time: "9:30 pm", home: "Dicey's A", away: "Hennelly's B",
+        id: 37, week: 10, date: "08 Jan 2027", time: "9:30 pm", home: "Dicey's A", away: "Hennelly's B",
         hs: null, as: null
       },
       {
-        id: 38, week: 10, date: "08 Jan 2026", time: "9:30 pm", home: "Hennelly's A", away: "Bradley's A",
+        id: 38, week: 10, date: "08 Jan 2027", time: "9:30 pm", home: "Hennelly's A", away: "Bradley's A",
         hs: null, as: null
       },
       {
-        id: 39, week: 10, date: "08 Jan 2026", time: "9:30 pm", home: "Dicey's B", away: "Mullins' A",
+        id: 39, week: 10, date: "08 Jan 2027", time: "9:30 pm", home: "Dicey's B", away: "Mullins' A",
         hs: null, as: null
       },
       {
-        id: 40, week: 10, date: "08 Jan 2026", time: "9:30 pm", home: "Walsh's A", away: "BYE",
+        id: 40, week: 10, date: "08 Jan 2027", time: "9:30 pm", home: "Walsh's A", away: "BYE",
         hs: null, as: null
       },
       // Week 11 R4
       {
-        id: 41, week: 11, date: "22 Jan 2026", time: "9:30 pm", home: "Hennelly's B", away: "Hennelly's A",
+        id: 41, week: 11, date: "22 Jan 2027", time: "9:30 pm", home: "Hennelly's B", away: "Hennelly's A",
         hs: null, as: null
       },
       {
-        id: 42, week: 11, date: "22 Jan 2026", time: "9:30 pm", home: "Dicey's A", away: "Walsh's A",
+        id: 42, week: 11, date: "22 Jan 2027", time: "9:30 pm", home: "Dicey's A", away: "Walsh's A",
         hs: null, as: null
       },
       {
-        id: 43, week: 11, date: "22 Jan 2026", time: "9:30 pm", home: "Bradley's A", away: "Dicey's B",
+        id: 43, week: 11, date: "22 Jan 2027", time: "9:30 pm", home: "Bradley's A", away: "Dicey's B",
         hs: null, as: null
       },
       {
-        id: 44, week: 11, date: "22 Jan 2026", time: "9:30 pm", home: "Mullins' A", away: "BYE",
+        id: 44, week: 11, date: "22 Jan 2027", time: "9:30 pm", home: "Mullins' A", away: "BYE",
         hs: null, as: null
       },
       // Week BUDDY BURKE
@@ -217,36 +217,36 @@ const LEAGUE_DATA = {
       // },
       // Week 12 R5
       {
-        id: 45, week: 12, date: "05 Feb 2026", time: "9:30 pm", home: "Mullins' A", away: "Hennelly's B",
+        id: 45, week: 12, date: "05 Feb 2027", time: "9:30 pm", home: "Mullins' A", away: "Hennelly's B",
         hs: null, as: null
       },
       {
-        id: 46, week: 12, date: "05 Feb 2026", time: "9:30 pm", home: "Hennelly's A", away: "Dicey's A",
+        id: 46, week: 12, date: "05 Feb 2027", time: "9:30 pm", home: "Hennelly's A", away: "Dicey's A",
         hs: null, as: null
       },
       {
-        id: 47, week: 12, date: "05 Feb 2026", time: "9:30 pm", home: "Bradley's A", away: "Walsh's A",
+        id: 47, week: 12, date: "05 Feb 2027", time: "9:30 pm", home: "Bradley's A", away: "Walsh's A",
         hs: null, as: null
       },
       {
-        id: 48, week: 12, date: "05 Feb 2026", time: "9:30 pm", home: "Dicey's B", away: "BYE",
+        id: 48, week: 12, date: "05 Feb 2027", time: "9:30 pm", home: "Dicey's B", away: "BYE",
         hs: null, as: null
       },
       // Week 13
       {
-        id: 49, week: 13, date: "19 Feb 2026", time: "9:30 pm", home: "Hennelly's B", away: "Dicey's B",
+        id: 49, week: 13, date: "19 Feb 2027", time: "9:30 pm", home: "Hennelly's B", away: "Dicey's B",
         hs: null, as: null
       },
       {
-        id: 50, week: 13, date: "19 Feb 2026", time: "9:30 pm", home: "Mullins' A", away: "Walsh's A",
+        id: 50, week: 13, date: "19 Feb 2027", time: "9:30 pm", home: "Mullins' A", away: "Walsh's A",
         hs: null, as: null
       },
       {
-        id: 51, week: 13, date: "19 Feb 2026", time: "9:30 pm", home: "Dicey's A", away: "Bradley's A",
+        id: 51, week: 13, date: "19 Feb 2027", time: "9:30 pm", home: "Dicey's A", away: "Bradley's A",
         hs: null, as: null
       },
       {
-        id: 52, week: 13, date: "19 Feb 2026", time: "9:30 pm", home: "Hennelly's A", away: "BYE",
+        id: 52, week: 13, date: "19 Feb 2027", time: "9:30 pm", home: "Hennelly's A", away: "BYE",
         hs: null, as: null
       },
       // Week BUDDY BURKE
@@ -260,42 +260,42 @@ const LEAGUE_DATA = {
       // },
       // Week 14
       {
-        id: 53, week: 14, date: "26 Feb 2026", time: "9:30 pm", home: "Walsh's A", hawayome: "Hennelly's B",
+        id: 53, week: 14, date: "26 Feb 2027", time: "9:30 pm", home: "Walsh's A", away: "Hennelly's B",
         hs: null, as: null
       },
       {
-        id: 54, week: 14, date: "26 Feb 2026", time: "9:30 pm", home: "Hennelly's A", away: "Dicey's B",
+        id: 54, week: 14, date: "26 Feb 2027", time: "9:30 pm", home: "Hennelly's A", away: "Dicey's B",
         hs: null, as: null
       },
       {
-        id: 55, week: 14, date: "26 Feb 2026", time: "9:30 pm", home: "Dicey's A", away: "Mullins' A",
+        id: 55, week: 14, date: "26 Feb 2027", time: "9:30 pm", home: "Dicey's A", away: "Mullins' A",
         hs: null, as: null
       },
       {
-        id: 56, week: 14, date: "26 Feb 2026", time: "9:30 pm", home: "Bradley's A", away: "BYE",
+        id: 56, week: 14, date: "26 Feb 2027", time: "9:30 pm", home: "Bradley's A", away: "BYE",
         hs: null, as: null
       },
       // Week 15
       {
-        id: 57, week: 15, date: "12 Mar 2026", time: "9:30 pm", home: "Semi-Final 1", away: "Semi-Final 1",
+        id: 57, week: 15, date: "12 Mar 2027", time: "9:30 pm", home: "Semi-Final 1", away: "Semi-Final 1",
         hs: null, as: null
       },
       {
-        id: 58, week: 15, date: "12 Mar 2026", time: "9:30 pm", home: "Semi-Final 1", away: "Semi-Final 1",
+        id: 58, week: 15, date: "12 Mar 2027", time: "9:30 pm", home: "Semi-Final 1", away: "Semi-Final 1",
         hs: null, as: null
       },
       // Week 16
       {
-        id: 59, week: 16, date: "26 Mar 2026", time: "9:30 pm", home: "Semi-Final 2", away: "Semi-Final 2",
+        id: 59, week: 16, date: "26 Mar 2027", time: "9:30 pm", home: "Semi-Final 2", away: "Semi-Final 2",
         hs: null, as: null
       },
       {
-        id: 60, week: 16, date: "26 Mar 2026", time: "9:30 pm", home: "Semi-Final 2", away: "Semi-Final 2",
+        id: 60, week: 16, date: "26 Mar 2027", time: "9:30 pm", home: "Semi-Final 2", away: "Semi-Final 2",
         hs: null, as: null
       },
       // Week 17
       {
-        id: 61, week: 17, date: "10 Apr 2026", time: "7 pm", home: "Final", away: "Final",
+        id: 61, week: 17, date: "10 Apr 2027", time: "7 pm", home: "Final", away: "Final",
         hs: null, as: null
       }
     ]

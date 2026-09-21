@@ -43,7 +43,7 @@ const TEAM_DATA = {
     players: ["Neil O'Halloran", "Mike Mullins", "Sean OG Keane", "Tagdh Mummery", "Nathan Corless", "Colman Dervan", "Flor Burke"],  
 //    honours: [{title: "B League", years: "2017"},{title: "B League", years: "2014"},{title: "A League", years: "2007"}] 
   },
-  "Mullins B": { league: "B League", established: "", about: "", 
+  "Mullins' B": { league: "B League", established: "", about: "", 
     players: ["Declan Moran", "James Lynch", "Michael Rabbitte", "Eanna Melville", "Cameron Fennessey", "Colin Finnegan", "Steven Fahy", "Jack McGann", "Mark Deegan"], 
     honours: [] 
   },
