@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team | Gort Darts League</title>
+  <title>History & Hall of Fame | Gort Darts League</title>
   <link rel="icon" type="image/png" href="../assets/images/tab-logo.png">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
@@ -20,19 +20,44 @@
     <a href="../b-league/standings.html">B League</a>
     <a href="../stats/stats.html">Statistics</a>
     <div class="nav-dropdown">
-      <button class="dropdown-button" type="button">More ▾</button>
+      <button class="dropdown-button active" type="button">More ▾</button>
       <div class="dropdown-menu">
         <a href="../rules/rules.html">Rules</a>
         <a href="../committee/committee.html">Committee</a>
-<!----              <a href="history/history.html">History</a>  -->
+        <a class="active" href="history.html">History</a>
       </div>
     </div>
   </nav>
 </header>
-<main id="team-page"></main>
+
+<main>
+  <section class="page-title history-title">
+    <span class="eyebrow">EST. ARCHIVE • SINCE 2002</span>
+    <h1>Hall of Fame</h1>
+    <p>Celebrating the champions, teams and memorable nights that have shaped the Gort & District Darts League.</p>
+  </section>
+
+  <section id="history-records" class="history-record-grid" aria-label="Hall of Fame records"></section>
+
+  <section class="history-toolbar" aria-label="History filters">
+    <div>
+      <span class="eyebrow">THE ARCHIVE</span>
+      <h2>Winners by Season</h2>
+    </div>
+    <label class="history-filter">
+      <span>Competition</span>
+      <select id="competition-filter">
+        <option value="all">All competitions</option>
+      </select>
+    </label>
+  </section>
+
+  <section id="history-seasons" class="history-seasons"></section>
+</main>
+
 <footer>GORT DARTS LEAGUE <span>2026-2027</span></footer>
-<script src="../data/league-data.js"></script>
-<script src="../data/team-data.js"></script>
-<script src="team.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../data/history-data.js"></script>
+<!----              <a href="history/history.html">History</a>  -->
 </body>
 </html>
