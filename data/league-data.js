@@ -311,7 +311,7 @@ const LEAGUE_DATA = {
       "McCarthy's",
       "Mullins' B",
       "O'Donnell's A",
-      "O'Donnells B",
+      "O'Donnell's B",
       "The Lady Gregory",
       "The Ledger Bar",
       "Walsh's B"
@@ -335,7 +335,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 67, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "O'Donnells B", away: "BYE",
+        id: 67, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "O'Donnell's B", away: "BYE",
         hs: null, as: null
       },
       {
@@ -348,7 +348,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 68, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "Bradley's B", away: "O'Donnells B",
+        id: 68, week: 2, date: "16 Oct 2026", time: "9:30 pm", home: "Bradley's B", away: "O'Donnell's B",
         hs: null, as: null
       },
       {
@@ -365,7 +365,7 @@ const LEAGUE_DATA = {
       },
       // -- Week 3 --------------------------------------------------------------------------------------------
       {
-        id: 72, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "The Lady Gregory", away: "O'Donnells B",
+        id: 72, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "The Lady Gregory", away: "O'Donnell's B",
         hs: null, as: null
       },
       {
@@ -390,7 +390,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 78, week: 4, date: "6 Nov 2026", time: "9:30 pm", home: "O'Donnells B", away: "Bradley's B",
+        id: 78, week: 4, date: "6 Nov 2026", time: "9:30 pm", home: "O'Donnell's B", away: "Bradley's B",
         hs: null, as: null
       },
       {
@@ -406,7 +406,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 84, week: 4, date: "6 Nov 2026", time: "9:30 pm", home: "O'Donnells A", away: "BYE",
+        id: 84, week: 4, date: "6 Nov 2026", time: "9:30 pm", home: "O'Donnell's A", away: "BYE",
         hs: null, as: null
       },
       // -- Week 5 --------------------------------------------------------------------------------------------
@@ -415,11 +415,11 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 86, week: 5, date: "13 Nov 2026", time: "9:30 pm", home: "O'Donnells B", away: "The Ledger Bar",
+        id: 86, week: 5, date: "13 Nov 2026", time: "9:30 pm", home: "O'Donnell's B", away: "The Ledger Bar",
         hs: null, as: null
       },
       {
-        id: 87, week: 5, date: "13 Nov 2026", time: "9:30 pm", home: "Mullins' B", away: "O'Donnells A",
+        id: 87, week: 5, date: "13 Nov 2026", time: "9:30 pm", home: "Mullins' B", away: "O'Donnell's A",
         hs: null, as: null
       },
       {
@@ -432,7 +432,7 @@ const LEAGUE_DATA = {
       },
       // -- Week 6 --------------------------------------------------------------------------------------------
       {
-        id: 90, week: 6, date: "20 Nov 2026", time: "9:30 pm", home: "O'Donnells B", away: "The Lady Gregory",
+        id: 90, week: 6, date: "20 Nov 2026", time: "9:30 pm", home: "O'Donnell's B", away: "The Lady Gregory",
         hs: null, as: null
       },
       {
@@ -440,7 +440,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 92, week: 6, date: "20 Nov 2026", time: "9:30 pm", home: "Hennelly's C", away: "O'Donnells A",
+        id: 92, week: 6, date: "20 Nov 2026", time: "9:30 pm", home: "Hennelly's C", away: "O'Donnell's A",
         hs: null, as: null
       },
       {
@@ -465,7 +465,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 98, week: 7, date: "27 Nov 2026", time: "9:30 pm", home: "O'Donnells A ", away: "Walsh's B",
+        id: 98, week: 7, date: "27 Nov 2026", time: "9:30 pm", home: "O'Donnell's A ", away: "Walsh's B",
         hs: null, as: null
       },
       {
@@ -473,7 +473,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 100, week: 7, date: "27 Nov 2026", time: "9:30 pm", home: "Hennelly's C", away: "O'Donnells B",
+        id: 100, week: 7, date: "27 Nov 2026", time: "9:30 pm", home: "Hennelly's C", away: "O'Donnell's B",
         hs: null, as: null
       },
       // -- Week 8 --------------------------------------------------------------------------------------------
@@ -482,11 +482,11 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 102, week: 8, date: "4 Dec 2026", time: "9:30 pm", home: "McCarthy's", away: "O'Donnells B",
+        id: 102, week: 8, date: "4 Dec 2026", time: "9:30 pm", home: "McCarthy's", away: "O'Donnell's B",
         hs: null, as: null
       },
       {
-        id: 103, week: 8, date: "4 Dec 2026", time: "9:30 pm", home: "O'Donnells A", away: "Harte's",
+        id: 103, week: 8, date: "4 Dec 2026", time: "9:30 pm", home: "O'Donnell's A", away: "Harte's",
         hs: null, as: null
       },
       {
@@ -507,11 +507,11 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 108, week: 9, date: "18 Dec 2026", time: "9:30 pm", home: "O'Donnells B", away: "McCarthy's",
+        id: 108, week: 9, date: "18 Dec 2026", time: "9:30 pm", home: "O'Donnell's B", away: "McCarthy's",
         hs: null, as: null
       },
       {
-        id: 109, week: 9, date: "18 Dec 2026", time: "9:30 pm", home: "Harte's", away: "O'Donnells A",
+        id: 109, week: 9, date: "18 Dec 2026", time: "9:30 pm", home: "Harte's", away: "O'Donnell's A",
         hs: null, as: null
       },
       {
@@ -528,11 +528,11 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 113, week: 10, date: "8 Jan 2027", time: "9:30 pm", home: "The Ledger Bar", away: "O'Donnells B",
+        id: 113, week: 10, date: "8 Jan 2027", time: "9:30 pm", home: "The Ledger Bar", away: "O'Donnell's B",
         hs: null, as: null
       },
       {
-        id: 114, week: 10, date: "8 Jan 2027", time: "9:30 pm", home: "O'Donnells A", away: "Mullins' B",
+        id: 114, week: 10, date: "8 Jan 2027", time: "9:30 pm", home: "O'Donnell's A", away: "Mullins' B",
         hs: null, as: null
       },
       {
@@ -561,11 +561,11 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 120, week: 11, date: "22 Jan 2027", time: "9:30 pm", home: "O'Donnells B", away: "Walsh's B",
+        id: 120, week: 11, date: "22 Jan 2027", time: "9:30 pm", home: "O'Donnell's B", away: "Walsh's B",
         hs: null, as: null
       },
       {
-        id: 121, week: 11, date: "22 Jan 2027", time: "9:30 pm", home: "O'Donnells A", away: "The Ledger Bar",
+        id: 121, week: 11, date: "22 Jan 2027", time: "9:30 pm", home: "O'Donnell's A", away: "The Ledger Bar",
         hs: null, as: null
       },
       // -- Week 12 --------------------------------------------------------------------------------------------
@@ -582,7 +582,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 125, week: 12, date: "5 Feb 2027", time: "9:30 pm", home: "O'Donnells B", away: "O'Donnells A",
+        id: 125, week: 12, date: "5 Feb 2027", time: "9:30 pm", home: "O'Donnell's B", away: "O'Donnell's A",
         hs: null, as: null
       },
       {
@@ -599,11 +599,11 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 129, week: 13, date: "19 Feb 2027", time: "9:30 pm", home: "O'Donnells A", away: "Bradley's B",
+        id: 129, week: 13, date: "19 Feb 2027", time: "9:30 pm", home: "O'Donnell's A", away: "Bradley's B",
         hs: null, as: null
       },
       {
-        id: 130, week: 13, date: "19 Feb 2027", time: "9:30 pm", home: "Mullins' B", away: "O'Donnells B",
+        id: 130, week: 13, date: "19 Feb 2027", time: "9:30 pm", home: "Mullins' B", away: "O'Donnell's B",
         hs: null, as: null
       },
       {
@@ -616,7 +616,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 133, week: 14, date: "5 Mar 2027", time: "9:30 pm", home: "O'Donnells A", away: "McCarthy's",
+        id: 133, week: 14, date: "5 Mar 2027", time: "9:30 pm", home: "O'Donnell's A", away: "McCarthy's",
         hs: null, as: null
       },
       {
@@ -624,7 +624,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 135, week: 14, date: "5 Mar 2027", time: "9:30 pm", home: "Harte's", away: "O'Donnells B",
+        id: 135, week: 14, date: "5 Mar 2027", time: "9:30 pm", home: "Harte's", away: "O'Donnell's B",
         hs: null, as: null
       },
       {
