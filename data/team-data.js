@@ -51,7 +51,7 @@ const TEAM_DATA = {
     players: ["Lorcan Walsh", "James Gormally", "Niall Carr", "Ben Mulcair", "Nathan Smith", "Declan Flaherty", "Jack Linnane", "Daniel Cunningham"],  
 //    honours: [{title: "B Shield", years: "2025"}] 
   },
-  "O'Donnells B": { league: "B League", established: "", about: "", 
+  "O'Donnell's B": { league: "B League", established: "", about: "", 
     players: ["Tiernan Finn", "Tiernan Walsh", "Caelem Walsh", "Shane Naughtan", "Dylan Murphy", "Niall Cunningham", "Joel Smith", "Pat Flaherty", "Paddy Cummins"],  
 //    honours: [{title: "B Shield", years: "2026"}, {title: "B League", years: "2019"}] 
   },
@@ -60,7 +60,7 @@ const TEAM_DATA = {
     honours: [] 
   },
   "The Ledger Bar": { league: "B League", established: "", about: "", 
-    players: ["Stephen Geoghegan", "Jonathan McKeogh", "Patryk Lipka", "Rachel Fleming", "Senan Redmond", "Aiden Hall", "James Egan", "Michael Coffey", "Tomek Krol"],
+    players: ["Stephen Geoghegan", "Jonathan McKeogh", "Patryk Lipka", "Senan Redmond", "Aiden Hall", "James Egan", "Michael Coffey", "Tomek Krol", "Damien Redmond"],
     honours: [] 
   },
   "Walsh's B": { league: "B League", established: "", about: "", 
