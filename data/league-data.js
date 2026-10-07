@@ -369,7 +369,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 73, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "Bradley's B", away: "The Ledger Bar",
+        id: 73, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "The Ledger Bar", away: "Bradley's B",
         hs: null, as: null
       },
       {
@@ -461,7 +461,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 97, week: 7, date: "27 Nov 2026", time: "9:30 pm", home: "The Ledger Bar", away: "Bradley's B",
+        id: 97, week: 7, date: "27 Nov 2026", time: "9:30 pm", home: "Bradley's B", away: "The Ledger Bar",
         hs: null, as: null
       },
       {
