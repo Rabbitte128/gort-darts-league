@@ -1,21 +1,24 @@
 function renderFixtureSlider(league, leagueName, containerSelector) {
-  const allFixtures = league.fixtures;
+  // Matches still to play, plus each unfinished week's BYEs.
+  // Once a week's results are all in, the whole week (BYEs included) disappears.
+  const allFixtures = getUpcomingFixtures(league);
 
   const weeks = [...new Set(allFixtures.map(match => match.week))]
     .sort((a, b) => a - b);
 
-  let currentIndex = weeks.findIndex(week =>
-    allFixtures.some(match =>
-      match.week === week &&
-      (match.hs === null || match.as === null)
-    )
-  );
-
-  if (currentIndex === -1) {
-    currentIndex = weeks.length - 1;
-  }
+  let currentIndex = 0;
 
   const container = document.querySelector(containerSelector);
+
+  if (weeks.length === 0) {
+    container.innerHTML = `
+      <div class="empty-state">
+        <h2>No fixtures remaining</h2>
+        <p>All ${leagueName} matches have been played.</p>
+      </div>
+    `;
+    return;
+  }
 
   function renderWeek() {
     const currentWeek = weeks[currentIndex];
@@ -108,17 +111,10 @@ function renderFixtureSlider(league, leagueName, containerSelector) {
 
 
 function renderResultsSlider(league, leagueName, containerSelector) {
-  const allFixtures = league.fixtures;
+  const allFixtures = getResults(league); // played matches only, never BYEs
 
   const completedWeeks = [
-    ...new Set(
-      allFixtures
-        .filter(match =>
-          match.hs !== null &&
-          match.as !== null
-        )
-        .map(match => match.week)
-    )
+    ...new Set(allFixtures.map(match => match.week))
   ].sort((a, b) => a - b);
 
   const container = document.querySelector(containerSelector);
@@ -138,11 +134,7 @@ function renderResultsSlider(league, leagueName, containerSelector) {
   function renderWeek() {
     const currentWeek = completedWeeks[currentIndex];
 
-    const results = allFixtures.filter(match =>
-      match.week === currentWeek &&
-      match.hs !== null &&
-      match.as !== null
-    );
+    const results = allFixtures.filter(match => match.week === currentWeek);
 
     const date = results[0]?.date || "";
 
@@ -164,20 +156,26 @@ function renderResultsSlider(league, leagueName, containerSelector) {
             <h2>Week ${currentWeek}</h2>
             <p>${date}</p>
           </div>
-          <button
-            id="next-week"
-            class="week-arrow"
-            ${currentIndex === completedWeeks.length - 1 ? "disabled" : ""}
-            aria-label="Next week's results"
-          >
-            &#10095;
-          </button>
+
+          <div class="week-nav-right">
+            <button
+              id="next-week"
+              class="week-arrow"
+              ${currentIndex === completedWeeks.length - 1 ? "disabled" : ""}
+              aria-label="Next week's results"
+            >
+              &#10095;
+            </button>
+          </div>
+
+        </div>
+
         <div class="card-grid">
           ${resultCards(results, leagueName)}
         </div>
 
         <div class="week-counter">
-          Week ${currentWeek}
+          <span>${currentIndex + 1} / ${completedWeeks.length}</span>
         </div>
 
       </div>
