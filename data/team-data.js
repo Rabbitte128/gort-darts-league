@@ -8,7 +8,7 @@ const TEAM_DATA = {
 //    honours: [{title: "B League", years: "2024"}, {title: "B Shield", years: "2019"}, {title: "B Shield", years: "2017"}] 
   },
   "Dicey's B": { league: "A League", established: "", about: "", 
-    players: ["Damien Foster", "Anto McDonagh", "David McDonagh", "Carl Mee", "Niall Stewart", "Anthony Keane", "Shane Sullivan", "Stephen Maloney"], 
+    players: ["Damien Foster", "Anto McDonagh", "David McDonagh", "Carl Mee", "Niall Stewart", "Anthony Keane", "Shane Sullivan", "Conor Liddy", "Damien Cooley"], 
 //    honours: [{title: "B League", years: "2026"},{title: "Dave McGrath Cup", years: "2026"}, {title: "Dave McGrath Cup", years: "2024"}, {title: "B Shield", years: "2022"}, {title: "B Shield", years: "2016"}] 
   },
   "Hennelly's A": { league: "A League", established: "", about: "", 
