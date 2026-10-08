@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  await window.RESULTS_READY;
 
   // Latest A League results
   const aResults = getResults(LEAGUE_DATA.a)
