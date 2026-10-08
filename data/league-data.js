@@ -335,11 +335,11 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 67, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "The Ledger Bar", away: "BYE",
+        id: 142, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "The Ledger Bar", away: "BYE",
         hs: null, as: null
       },
       {
-        id: 68, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "O'Donnell's B", away: "BYE",
+        id: 143, week: 1, date: "9 Oct 2026", time: "9:30 pm", home: "O'Donnell's B", away: "BYE",
         hs: null, as: null
       },
       // -- Week 2 --------------------------------------------------------------------------------------------
@@ -369,7 +369,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 73, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "The Ledger Bar", away: "Bradley's B",
+        id: 73, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "Bradley's B", away: "The Ledger Bar",
         hs: null, as: null
       },
       {
@@ -461,7 +461,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 97, week: 7, date: "27 Nov 2026", time: "9:30 pm", home: "Bradley's B", away: "The Ledger Bar",
+        id: 97, week: 7, date: "27 Nov 2026", time: "9:30 pm", home: "The Ledger Bar", away: "Bradley's B",
         hs: null, as: null
       },
       {
@@ -544,7 +544,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 116, week: 10, date: "8 Jan 2027", time: "9:30 pm", home: "Walsh's B", away: "BYE",
+        id: 144, week: 10, date: "8 Jan 2027", time: "9:30 pm", home: "Walsh's B", away: "BYE",
         hs: null, as: null
       },
       // -- Week 11 --------------------------------------------------------------------------------------------
@@ -658,7 +658,19 @@ const LEAGUE_DATA = {
 
   }
   ,
+  // Player stats are kept separately for each league.
+  // oneEighties: { player, team, total }   checkouts: { player, team, score }
   stats: {
+  a: {
+    oneEighties: [],
+    checkouts: []
+  },
+  b: {
+    oneEighties: [],
+    checkouts: []
+  },
+  // Old examples from last season (not shown on the site):
+  examples: {
     oneEighties: [
     //   {
     //   player: "John Cahill", team: "Walsh's A", total: 3
@@ -699,7 +711,7 @@ const LEAGUE_DATA = {
   //   player: "Padraic Curley", team: "Hennelly's A", score: 156
   // }
 ]
-
+  }
 }
 
 }
@@ -737,15 +749,31 @@ function resultCards(matches, league) {
   </strong></div></article>`).join("");
 
 }
-function getResults(league) {
-  return league.fixtures.filter(match =>
-    match.hs !== null && match.as !== null
-  );
+// A "BYE" fixture means that team has no game that week.
+function isBye(match) {
+  return match.home === "BYE" || match.away === "BYE";
 }
 
+function hasScore(match) {
+  return match.hs !== null && match.as !== null;
+}
+
+// A week is complete once every real (non-BYE) match has a score.
+function isWeekComplete(league, week) {
+  return league.fixtures
+    .filter(match => match.week === week && !isBye(match))
+    .every(hasScore);
+}
+
+// Played matches only. BYEs are never results.
+function getResults(league) {
+  return league.fixtures.filter(match => !isBye(match) && hasScore(match));
+}
+
+// Matches still to play. A week's BYEs are shown until that week is complete.
 function getUpcomingFixtures(league) {
   return league.fixtures.filter(match =>
-    match.hs === null || match.as === null
+    isBye(match) ? !isWeekComplete(league, match.week) : !hasScore(match)
   );
 }
 
