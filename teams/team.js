@@ -128,12 +128,17 @@ function renderTeamFixtures(teamName, team) {
   `;
 }
 
+function getLeagueStats(team) {
+  return team && team.league === "A League" ? LEAGUE_DATA.stats.a : LEAGUE_DATA.stats.b;
+}
+
 function getPlayerStats(player, team) {
-  const oneEighties = LEAGUE_DATA.stats.oneEighties
+  const stats = getLeagueStats(TEAM_DATA[team]);
+  const oneEighties = stats.oneEighties
     .filter(row => row.team === team && row.player === player)
     .reduce((total, row) => total + row.total, 0);
 
-  const checkoutRows = LEAGUE_DATA.stats.checkouts
+  const checkoutRows = stats.checkouts
     .filter(row => row.team === team && row.player === player);
   const bestCheckout = checkoutRows.length
     ? Math.max(...checkoutRows.map(row => row.score))
@@ -170,8 +175,9 @@ function renderHonours(honours) {
 }
 
 function getTeamStats(team) {
-  const oneEighties = LEAGUE_DATA.stats.oneEighties.filter(row => row.team === team);
-  const checkouts = LEAGUE_DATA.stats.checkouts.filter(row => row.team === team);
+  const stats = getLeagueStats(TEAM_DATA[team]);
+  const oneEighties = stats.oneEighties.filter(row => row.team === team);
+  const checkouts = stats.checkouts.filter(row => row.team === team);
   return { oneEighties, checkouts };
 }
 
@@ -184,7 +190,8 @@ function renderTeamStats(team) {
   </div>`;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  await window.RESULTS_READY;
   const params = new URLSearchParams(window.location.search);
   const teamName = params.get("team");
   const team = teamName ? TEAM_DATA[teamName] : null;

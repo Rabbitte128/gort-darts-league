@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  await window.RESULTS_READY;
 
   const standings = calculateStandings(LEAGUE_DATA.a);
 
