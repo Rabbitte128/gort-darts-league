@@ -42,19 +42,24 @@
               <a href="rules/rules.html">Rules</a>
               <a href="committee/committee.html">Committee</a>
               <a href="portal/portal.html">Admin Login</a>
-<!----              <a href="history/history.html">History</a>  -->
             </div>
           </div>
       </nav>
     </header>
     <main>
 
-      <section class="league-notice" aria-labelledby="league-notice-title">
-        <div class="notice-header">
-          <span class="notice-icon" aria-hidden="true">📢</span>
-          <span>LEAGUE NOTICE</span>
-        </div>
-        <h2 id="league-notice-title">B League Groups — 2026/27 Season</h2>
+      <section class="league-notice" id="notice-b-groups-2026" data-notice-id="b-groups-2026" aria-labelledby="league-notice-title">
+        <button class="notice-dismiss" type="button" aria-label="Dismiss notice">✕</button>
+        <details class="notice-details">
+        <summary class="notice-summary">
+          <span class="notice-header">
+            <span class="notice-icon" aria-hidden="true">📢</span>
+            <span>LEAGUE NOTICE</span>
+          </span>
+          <span class="notice-title" id="league-notice-title">B League Groups — 2026/27 Season</span>
+          <span class="notice-toggle" aria-hidden="true">▾</span>
+        </summary>
+        <div class="notice-body">
         <p>
           The B League will be split into <strong>2 groups</strong> to reduce the number of games.
           Every team will still play each other. Teams will play each team in their own group
@@ -76,6 +81,8 @@
           <li>O'Donnell's A</li>
           <li>Walsh's B</li>
         </ul>
+        </div>
+        </details>
       </section>
       <section>
         <div class="section-heading">
@@ -121,7 +128,7 @@
             B League
           </strong>
           <small>
-            8 teams - 15 points per match
+            10 teams - 15 points per match
           </small>
         </a>
         <a class="quick-card" href="a-league/stats.html">
@@ -132,7 +139,7 @@
             Statistics
           </strong>
           <small>
-            180s and highest checkouts (A &amp; B League)
+            180s and highest checkouts
           </small>
         </a>
       </section>
@@ -147,5 +154,6 @@
     <script src="data/firebase-config.js"></script>
     <script src="assets/js/results-sync.js"></script>
     <script src="assets/js/home.js"></script>
+    <script src="assets/js/notices.js"></script>
   </body>
 </html>
