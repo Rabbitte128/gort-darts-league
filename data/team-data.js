@@ -56,7 +56,7 @@ const TEAM_DATA = {
 //    honours: [{title: "B Shield", years: "2026"}, {title: "B League", years: "2019"}] 
   },
   "The Lady Gregory": { league: "B League", established: "", about: "", 
-    players: ["Stephen Fahey", "Barry McGarry", "Kianan Fahey", "Jarlath McDermott", "Killian Casey", "Jan Lipka", "Sean Kelly"], 
+    players: ["Stephen Fahey", "Barry McGarry", "Kianan Fahey", "Jarlath McDermott", "Killian Casey", "Jan Lipka", "Eoin Fahey"], 
     honours: [] 
   },
   "The Ledger Bar": { league: "B League", established: "", about: "", 
