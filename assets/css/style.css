@@ -554,6 +554,96 @@ footer span {
   font-size: 18px;
 }
 
+/* Collapsible / dismissible notice */
+.league-notice {
+  position: relative;
+  padding: 14px 56px 14px 20px;
+  margin: 20px 0;
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.league-notice.is-dismissing {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.notice-summary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.notice-summary::-webkit-details-marker {
+  display: none;
+}
+
+.notice-summary .notice-header {
+  margin-bottom: 0;
+}
+
+.notice-title {
+  flex: 1;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.notice-toggle {
+  color: #b8b8b8;
+  transition: transform .2s ease;
+}
+
+.notice-details[open] .notice-toggle {
+  transform: rotate(180deg);
+}
+
+.notice-summary:focus-visible,
+.notice-dismiss:focus-visible {
+  outline: 2px solid #fa0808;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.notice-body {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #38362b;
+}
+
+.notice-body h3 {
+  margin: 16px 0 6px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.notice-body ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #b8b8b8;
+}
+
+.notice-dismiss {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #b8b8b8;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.notice-dismiss:hover {
+  background: #2b2a22;
+  color: #ffffff;
+}
+
 .league-notice h2 {
   margin: 0 0 10px 0;
 
