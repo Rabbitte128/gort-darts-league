@@ -40,7 +40,7 @@ const TEAM_DATA = {
     players: ["Seamus Hennelly", "Sean Mahon", "Jason O'Donoghue", "Cian O'Laughlin", "Ferdia Touhey", "Brian Herrernan", "Calum Prendergast", "Ronan Burke", "Ollie Walsh"] 
   },
   "McCarthy's": { league: "B League", established: "", about: "", 
-    players: ["Neil O'Halloran", "Mike Mullins", "Sean OG Keane", "Tagdh Mummery", "Nathan Corless", "Colman Dervan", "Flor Burke"],  
+    players: ["Neil O'Halloran", "Mike Mullins", "Sean OG Keane", "Tagdh Mummery", "Nathan Corless", "Colman Dervan", "Flor Burke", "Pat Lambert", "Florence McCarthy"],  
 //    honours: [{title: "B League", years: "2017"},{title: "B League", years: "2014"},{title: "A League", years: "2007"}] 
   },
   "Mullins' B": { league: "B League", established: "", about: "", 
