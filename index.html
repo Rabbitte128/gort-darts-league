@@ -42,19 +42,46 @@
               <a href="rules/rules.html">Rules</a>
               <a href="committee/committee.html">Committee</a>
               <a href="portal/portal.html">Admin Login</a>
-<!----              <a href="history/history.html">History</a>  -->
             </div>
           </div>
       </nav>
     </header>
     <main>
 
-      <section class="league-notice" aria-labelledby="league-notice-title">
-        <div class="notice-header">
-          <span class="notice-icon" aria-hidden="true">📢</span>
-          <span>LEAGUE NOTICE</span>
+      <div class="league-switcher">
+        <div class="league-tabs" role="tablist" aria-label="Choose league">
+          <button class="league-tab active" type="button" role="tab" aria-selected="true" data-league="a">A League</button>
+          <button class="league-tab" type="button" role="tab" aria-selected="false" data-league="b">B League</button>
         </div>
-        <h2 id="league-notice-title">B League Groups — 2026/27 Season</h2>
+      </div>
+
+      <!-- To switch back to the logo version: remove "hero--photo" from the class below -->
+      <section class="hero hero--photo" id="home-hero" aria-labelledby="hero-title">
+        <img class="hero-logo" src="assets/images/logo-green.jpeg" alt="Gort Darts League logo">
+        <div class="hero-content">
+          <p class="hero-eyebrow" id="hero-eyebrow">2026/27 Season · A League</p>
+          <h1 id="hero-title">Gort Darts League</h1>
+          <p class="hero-tagline">League standings, fixtures, results and stats, all in one place.</p>
+          <div class="hero-actions">
+            <a class="hero-btn hero-btn-primary" id="hero-standings" href="a-league/standings.html">View Standings</a>
+            <a class="hero-btn" id="hero-fixtures" href="a-league/fixtures.html">Fixtures</a>
+            <a class="hero-btn" id="hero-results" href="a-league/results.html">Results</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="league-notice" id="notice-b-groups-2026" data-notice-id="b-groups-2026" aria-labelledby="league-notice-title">
+        <button class="notice-dismiss" type="button" aria-label="Dismiss notice">✕</button>
+        <details class="notice-details">
+        <summary class="notice-summary">
+          <span class="notice-header">
+            <span class="notice-icon" aria-hidden="true">📢</span>
+            <span>LEAGUE NOTICE</span>
+          </span>
+          <span class="notice-title" id="league-notice-title">B League Groups — 2026/27 Season</span>
+          <span class="notice-toggle" aria-hidden="true">▾</span>
+        </summary>
+        <div class="notice-body">
         <p>
           The B League will be split into <strong>2 groups</strong> to reduce the number of games.
           Every team will still play each other. Teams will play each team in their own group
@@ -76,65 +103,32 @@
           <li>O'Donnell's A</li>
           <li>Walsh's B</li>
         </ul>
+        </div>
+        </details>
       </section>
       <section>
         <div class="section-heading">
-          <h2>
-            Latest Results
+          <h2 id="results-title">
+            Latest A League Results
           </h2>
-          <a href="a-league/results.html">
-            View all →
-          </a>
         </div>
         <div id="home-results" class="card-grid">
         </div>
+        <a class="view-all-link" id="results-view-all" href="a-league/results.html">
+          View all A League results →
+        </a>
       </section>
       <section>
         <div class="section-heading">
-          <h2>
-            Next Fixtures
+          <h2 id="fixtures-title">
+            Next A League Fixtures
           </h2>
-          <a href="a-league/fixtures.html">
+          <a id="fixtures-view-all" href="a-league/fixtures.html">
             Full fixture list →
           </a>
         </div>
         <div id="home-fixtures" class="card-grid">
         </div>
-      </section>
-      <section class="quick-grid">
-        <a class="quick-card" href="a-league/standings.html">
-          <span>
-            🥇
-          </span>
-          <strong>
-            A League
-          </strong>
-          <small>
-            8 teams - 9 points per match
-          </small>
-        </a>
-        <a class="quick-card" href="b-league/standings.html">
-          <span>
-            🥈
-          </span>
-          <strong>
-            B League
-          </strong>
-          <small>
-            8 teams - 15 points per match
-          </small>
-        </a>
-        <a class="quick-card" href="a-league/stats.html">
-          <span>
-            🎯
-          </span>
-          <strong>
-            Statistics
-          </strong>
-          <small>
-            180s and highest checkouts (A &amp; B League)
-          </small>
-        </a>
       </section>
     </main>
     <footer>
@@ -147,5 +141,6 @@
     <script src="data/firebase-config.js"></script>
     <script src="assets/js/results-sync.js"></script>
     <script src="assets/js/home.js"></script>
+    <script src="assets/js/notices.js"></script>
   </body>
 </html>

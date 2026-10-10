@@ -666,7 +666,10 @@ const LEAGUE_DATA = {
     checkouts: []
   },
   b: {
-    oneEighties: [],
+    oneEighties: [
+      {"player": "Jason O'Donoghue", "team": "Hennelly's C", "total": 1},
+      {"player": "Mike Mullins", "team": "McCarthy's", "total": 1}
+    ],
     checkouts: []
   },
   // Old examples from last season (not shown on the site):
