@@ -662,7 +662,7 @@ const LEAGUE_DATA = {
   // oneEighties: { player, team, total }   checkouts: { player, team, score }
   stats: {
   a: {
-    oneEighties: [],
+    oneEighties: [{"player": "Mikey Daly", "team": "Dicey's A", "total": 1}],
     checkouts: []
   },
   b: {
