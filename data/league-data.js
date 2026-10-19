@@ -373,7 +373,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 74, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "Mullins' B", away: "Hennelly's C",
+        id: 74, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "Hennelly's C", away: "Mullins' B",
         hs: null, as: null
       },
       {
@@ -394,7 +394,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 79, week: 4, date: "6 Nov 2026", time: "9:30 pm", home: "Hennelly's C", away: "Mullins' B",
+        id: 79, week: 4, date: "6 Nov 2026", time: "9:30 pm", home: "Mullins' B", away: "Hennelly's C",
         hs: null, as: null
       },
       {
