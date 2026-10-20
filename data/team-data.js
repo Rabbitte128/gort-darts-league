@@ -64,7 +64,7 @@ const TEAM_DATA = {
     honours: [] 
   },
   "Walsh's B": { league: "B League", established: "", about: "", 
-    players: ["Hughie O'Donnell", "Colm Kelly", "Johnny Niland", "Ivon McGrath", "Michael Diviney", "Dave Goodison", "Gerard Lally", "Barry McNeoin", "Kristin Keane"], 
+    players: ["Hughie O'Donnell", "Colm Kelly", "Johnny Niland", "Ivon McGrath", "Michael Diviney", "Oisin O'Donnell", "Gerard Lally", "Barry McNeoin", "Kristin Keane"], 
     honours: [] 
   }
 };

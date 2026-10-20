@@ -260,19 +260,19 @@ const LEAGUE_DATA = {
       // },
       // Week 14
       {
-        id: 53, week: 14, date: "26 Feb 2027", time: "9:30 pm", home: "Mullins' A", away: "Hennelly's A",
+        id: 53, week: 14, date: "05 Mar 2027", time: "9:30 pm", home: "Mullins' A", away: "Hennelly's A",
         hs: null, as: null
       },
       {
-        id: 54, week: 14, date: "26 Feb 2027", time: "9:30 pm", home: "Hennelly's B", away: "Walsh's A",
+        id: 54, week: 14, date: "05 Mar 2027", time: "9:30 pm", home: "Hennelly's B", away: "Walsh's A",
         hs: null, as: null
       },
       {
-        id: 55, week: 14, date: "26 Feb 2027", time: "9:30 pm", home: "Dicey's A", away: "Dicey's B",
+        id: 55, week: 14, date: "05 Mar 2027", time: "9:30 pm", home: "Dicey's A", away: "Dicey's B",
         hs: null, as: null
       },
       {
-        id: 56, week: 14, date: "26 Feb 2027", time: "9:30 pm", home: "Bradley's A", away: "BYE",
+        id: 56, week: 14, date: "05 Mar 2027", time: "9:30 pm", home: "Bradley's A", away: "BYE",
         hs: null, as: null
       },
       // Week 15
@@ -373,7 +373,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 74, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "Mullins' B", away: "Hennelly's C",
+        id: 74, week: 3, date: "30 Oct 2026", time: "9:30 pm", home: "Hennelly's C", away: "Mullins' B",
         hs: null, as: null
       },
       {
@@ -394,7 +394,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 79, week: 4, date: "6 Nov 2026", time: "9:30 pm", home: "Hennelly's C", away: "Mullins' B",
+        id: 79, week: 4, date: "6 Nov 2026", time: "9:30 pm", home: "Mullins' B", away: "Hennelly's C",
         hs: null, as: null
       },
       {
@@ -440,7 +440,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 92, week: 6, date: "20 Nov 2026", time: "9:30 pm", home: "Bradley's B", away: "The Lady Gregory",
+        id: 92, week: 6, date: "20 Nov 2026", time: "9:30 pm", home: "The Lady Gregory", away: "Bradley's B",
         hs: null, as: null
       },
       {
@@ -457,7 +457,7 @@ const LEAGUE_DATA = {
       },
       // -- Week 7 --------------------------------------------------------------------------------------------
       {
-        id: 96, week: 7, date: "27 Nov 2026", time: "9:30 pm", home: "Mullins' B", away: "Harte's",
+        id: 96, week: 7, date: "27 Nov 2026", time: "9:30 pm", home: "Harte's", away: "Mullins' B",
         hs: null, as: null
       },
       {
@@ -511,7 +511,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 109, week: 9, date: "18 Dec 2026", time: "9:30 pm", home: "Harte's", away: "Mullins' B",
+        id: 109, week: 9, date: "18 Dec 2026", time: "9:30 pm", home: "Mullins' B", away: "Harte's",
         hs: null, as: null
       },
       {
@@ -612,7 +612,7 @@ const LEAGUE_DATA = {
       },
       // -- Week 14 --------------------------------------------------------------------------------------------
       {
-        id: 132, week: 14, date: "5 Mar 2027", time: "9:30 pm", home: "The Lady Gregory", away: "Bradley's B",
+        id: 132, week: 14, date: "5 Mar 2027", time: "9:30 pm", home: "Bradley's B", away: "The Lady Gregory",
         hs: null, as: null
       },
       {
