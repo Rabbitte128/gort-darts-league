@@ -440,7 +440,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 92, week: 6, date: "20 Nov 2026", time: "9:30 pm", home: "Bradley's B", away: "The Lady Gregory",
+        id: 92, week: 6, date: "20 Nov 2026", time: "9:30 pm", home: "The Lady Gregory", away: "Bradley's B",
         hs: null, as: null
       },
       {
@@ -612,7 +612,7 @@ const LEAGUE_DATA = {
       },
       // -- Week 14 --------------------------------------------------------------------------------------------
       {
-        id: 132, week: 14, date: "5 Mar 2027", time: "9:30 pm", home: "The Lady Gregory", away: "Bradley's B",
+        id: 132, week: 14, date: "5 Mar 2027", time: "9:30 pm", home: "Bradley's B", away: "The Lady Gregory",
         hs: null, as: null
       },
       {
