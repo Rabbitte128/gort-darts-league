@@ -457,7 +457,7 @@ const LEAGUE_DATA = {
       },
       // -- Week 7 --------------------------------------------------------------------------------------------
       {
-        id: 96, week: 7, date: "27 Nov 2026", time: "9:30 pm", home: "Mullins' B", away: "Harte's",
+        id: 96, week: 7, date: "27 Nov 2026", time: "9:30 pm", home: "Harte's", away: "Mullins' B",
         hs: null, as: null
       },
       {
@@ -511,7 +511,7 @@ const LEAGUE_DATA = {
         hs: null, as: null
       },
       {
-        id: 109, week: 9, date: "18 Dec 2026", time: "9:30 pm", home: "Harte's", away: "Mullins' B",
+        id: 109, week: 9, date: "18 Dec 2026", time: "9:30 pm", home: "Mullins' B", away: "Harte's",
         hs: null, as: null
       },
       {
