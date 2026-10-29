@@ -1397,6 +1397,14 @@ footer span {
   font-size: 1.1rem;
 }
 
+/* Cup fixtures on team pages */
+.team-fixture-cup {
+  border-color: rgba(240, 188, 46, .55);
+  background: rgba(240, 188, 46, .06);
+}
+
+.team-fixture-cup .team-fixture-week { color: var(--gold); }
+
 @media (max-width: 600px) {
   .team-fixture-row {
     grid-template-columns: 1fr;
