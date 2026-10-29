@@ -86,9 +86,22 @@ function renderCurrentSeason(teamName, team) {
 function renderTeamFixtures(teamName, team) {
   const league = getLeagueForTeam(team);
 
-  const fixtures = league.fixtures
+  const leagueFixtures = league.fixtures
     .filter(match => match.home === teamName || match.away === teamName)
-    .sort((a, b) => a.week - b.week || a.id - b.id);
+    .map(match => ({ ...match, label: `Week ${match.week}`, isCup: false }));
+
+  const cupKey = team.league === "A League" ? "a" : "b";
+  const cupFixtures = typeof getCupMatchesForTeam === "function"
+    ? getCupMatchesForTeam(cupKey, teamName).map(match => ({ ...match, label: `Cup ${match.round}`, isCup: true }))
+    : [];
+
+  const toTime = date => {
+    const t = new Date(date).getTime();
+    return isNaN(t) ? Infinity : t;
+  };
+
+  const fixtures = [...leagueFixtures, ...cupFixtures]
+    .sort((a, b) => toTime(a.date) - toTime(b.date) || (a.week || 0) - (b.week || 0));
 
   if (!fixtures.length) {
     return `<p class="team-empty">Fixtures have not been added yet.</p>`;
@@ -100,9 +113,9 @@ function renderTeamFixtures(teamName, team) {
         const completed = match.hs !== null && match.as !== null;
 
         return `
-          <div class="team-fixture-row">
+          <div class="team-fixture-row${match.isCup ? " team-fixture-cup" : ""}">
             <div class="team-fixture-info">
-              <span class="team-fixture-week">Week ${match.week}</span>
+              <span class="team-fixture-week">${escapeHtml(match.label)}</span>
               <span class="team-fixture-date">${escapeHtml(match.date)}</span>
             </div>
 
