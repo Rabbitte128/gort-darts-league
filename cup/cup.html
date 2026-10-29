@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cup | Gort Darts League</title>
+  <link rel="icon" type="image/png" href="../assets/images/tab-logo.png">
+  <meta name="description" content="Gort Darts League 2026-2027 A and B League Cup brackets and dates.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
 
+<body>
+
+<header class="site-header">
+  <a class="brand" href="../index.html">
+    <span class="brand-mark">
+      <img src="../assets/images/logo-green.jpeg" alt="Gort Darts League logo">
+    </span>
+    <span>
+      GORT DARTS LEAGUE
+      <small>2026-2027 SEASON</small>
+    </span>
+  </a>
+
+  <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="../a-league/standings.html">A League</a>
+    <a href="../b-league/standings.html">B League</a>
+    <a class="active" href="cup.html">Cup</a>
+    <div class="nav-dropdown">
+      <button class="dropdown-button" type="button">More ▾</button>
+      <div class="dropdown-menu">
+        <a href="../rules/rules.html">Rules</a>
+        <a href="../committee/committee.html">Committee</a>
+        <a href="../portal/portal.html">Admin Login</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-title">
+    <span class="eyebrow">GORT DARTS LEAGUE</span>
+    <h1>Cup 2026/27</h1>
+    <p>A &amp; B League Cup brackets. The draw has not taken place yet. Teams will be added once it has.</p>
+  </section>
+
+  <div class="cup-toolbar">
+    <div class="league-tabs" role="tablist" aria-label="Choose cup">
+      <button class="league-tab active" type="button" role="tab" aria-selected="true" data-league="a">A League Cup</button>
+      <button class="league-tab" type="button" role="tab" aria-selected="false" data-league="b">B League Cup</button>
+    </div>
+    <p class="cup-note" id="cup-note"></p>
+  </div>
+
+  <section class="cup-bracket" id="cup-bracket" aria-label="Cup bracket"></section>
+
+  <section class="panel cup-dates">
+    <h2>Key Dates</h2>
+    <ul class="honours-list" id="cup-dates-list"></ul>
+  </section>
+
+</main>
+
+<footer>
+  GORT DARTS LEAGUE
+  <span>2026-2027</span>
+</footer>
+
+<script src="../data/cup-data.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="cup.js"></script>
+</body>
+</html>
