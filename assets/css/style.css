@@ -1397,6 +1397,14 @@ footer span {
   font-size: 1.1rem;
 }
 
+/* Cup fixtures on team pages */
+.team-fixture-cup {
+  border-color: rgba(240, 188, 46, .55);
+  background: rgba(240, 188, 46, .06);
+}
+
+.team-fixture-cup .team-fixture-week { color: var(--gold); }
+
 @media (max-width: 600px) {
   .team-fixture-row {
     grid-template-columns: 1fr;
@@ -1680,3 +1688,125 @@ footer span {
   text-align: center;
 }
 
+/* =========================
+   CUP BRACKET PAGE
+   ========================= */
+.cup-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  margin-bottom: 22px;
+}
+
+.cup-note { margin: 0; color: var(--muted); }
+
+.cup-bracket {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  padding: 6px 2px 18px;
+}
+
+.cup-round {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 220px;
+}
+
+.cup-round-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--gold);
+}
+
+.cup-round-head strong { font-size: .95rem; }
+.cup-round-head span { color: var(--gold); font-size: .78rem; font-weight: 800; white-space: nowrap; }
+
+/* Spread matches evenly so later rounds line up between earlier ones */
+.cup-round-matches {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+  gap: 14px;
+}
+
+.cup-match {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: linear-gradient(145deg, rgba(16, 70, 71, .96), rgba(7, 51, 52, .96));
+  overflow: hidden;
+}
+
+.cup-match-id {
+  display: block;
+  padding: 4px 10px;
+  background: #0b4041;
+  color: var(--muted);
+  font-size: .68rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.cup-slot {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 10px;
+  font-weight: 800;
+}
+
+.cup-slot + .cup-slot { border-top: 1px solid var(--border); }
+
+.cup-score { color: var(--gold); font-variant-numeric: tabular-nums; }
+
+.cup-slot.is-tbd .cup-team { color: var(--muted); font-weight: 600; font-style: italic; }
+.cup-slot.is-bye .cup-team { color: var(--muted); letter-spacing: .1em; }
+.cup-slot.is-winner { background: rgba(240, 188, 46, .12); }
+.cup-slot.is-winner .cup-team { color: var(--gold); }
+.cup-slot.is-loser { opacity: .55; }
+
+/* Connector lines between rounds */
+.cup-round:not(:last-child) .cup-match::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -29px;
+  width: 28px;
+  border-top: 2px solid var(--border);
+}
+.cup-match { overflow: visible; }
+.cup-match-id { border-radius: 10px 10px 0 0; }
+
+.cup-round-champion { flex-basis: 180px; }
+
+.cup-champion {
+  padding: 22px 14px;
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  background: rgba(240, 188, 46, .1);
+  color: var(--gold);
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.cup-champion.is-tbd { color: var(--muted); border-style: dashed; font-weight: 700; font-style: italic; }
+
+.cup-dates { margin-top: 26px; }
+.cup-dates h2 { margin-top: 0; }
+
+@media (max-width: 760px) {
+  .cup-toolbar { flex-direction: column; align-items: stretch; }
+  .cup-toolbar .league-tabs { align-self: center; }
+  .cup-note { text-align: center; }
+  .cup-round { flex-basis: 200px; }
+}
