@@ -1461,6 +1461,12 @@ footer span {
 .portal-match .home { text-align: right; }
 .portal-team { font-weight: 800; }
 .portal-match .badge { margin-top: 0; text-align: center; }
+.portal-extras { grid-column: 1 / -1; background: var(--navy2); border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; }
+.portal-extras summary { cursor: pointer; font-weight: 700; }
+.portal-extra-list { display: grid; gap: 6px; margin-top: 10px; }
+.portal-extra-row { display: grid; grid-template-columns: 1fr 110px auto; gap: 8px; align-items: center; }
+.portal-extra-row select { padding: 8px; border-radius: 8px; border: 1px solid var(--border); background: var(--navy2); color: var(--text); font: inherit; }
+.portal-extras .extra-add { margin-top: 6px; }
 @media (max-width: 640px) {
   .portal-match { grid-template-columns: 1fr 56px auto 56px 1fr; }
   .portal-match .badge { grid-column: 1 / -1; justify-self: center; }

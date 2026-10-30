@@ -1,6 +1,7 @@
 // Renders the 180 and highest-checkout leaderboards for one league.
 // The league comes from data-league="a" / "b" on #page-content.
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  if (window.RESULTS_READY) await window.RESULTS_READY;
   const content = document.querySelector("#page-content");
   const stats = LEAGUE_DATA.stats[content.dataset.league] || { oneEighties: [], checkouts: [] };
 

@@ -662,13 +662,15 @@ const LEAGUE_DATA = {
   // oneEighties: { player, team, total }   checkouts: { player, team, score }
   stats: {
   a: {
-    oneEighties: [{"player": "Mikey Daly", "team": "Dicey's A", "total": 1}],
+    oneEighties: [
+      // {"player": "Mikey Daly", "team": "Dicey's A", "total": 1}
+    ],
     checkouts: []
   },
   b: {
     oneEighties: [
-      {"player": "Jason O'Donoghue", "team": "Hennelly's C", "total": 1},
-      {"player": "Mike Mullins", "team": "McCarthy's", "total": 1}
+      // {"player": "Jason O'Donoghue", "team": "Hennelly's C", "total": 1},
+      // {"player": "Mike Mullins", "team": "McCarthy's", "total": 1}
     ],
     checkouts: []
   },

@@ -107,6 +107,78 @@ function renderLogin() {
   });
 }
 
+/* ---------- 180s & checkouts ---------- */
+
+// Checkout scores that cannot be finished in three darts.
+const IMPOSSIBLE_CHECKOUTS = [159, 162, 163, 165, 166, 168, 169];
+
+function playerOptions(f, selected = "") {
+  const group = team => {
+    const players = (typeof TEAM_DATA !== "undefined" && TEAM_DATA[team]?.players) || [];
+    return `<optgroup label="${esc(team)}">${players.map(p => {
+      const value = `${team}|${p}`;
+      return `<option value="${esc(value)}" ${value === selected ? "selected" : ""}>${esc(p)}</option>`;
+    }).join("")}</optgroup>`;
+  };
+  return `<option value="">Select player…</option>${group(f.home)}${group(f.away)}`;
+}
+
+function extraRow(type, f, entry = {}) {
+  const selected = entry.player ? `${entry.team}|${entry.player}` : "";
+  const isTon = type === "180";
+  const value = isTon ? (entry.total ?? 1) : (entry.score ?? "");
+  return `<div class="portal-extra-row" data-type="${type}">
+    <select class="extra-player" aria-label="Player">${playerOptions(f, selected)}</select>
+    <input type="number" class="extra-value" min="${isTon ? 1 : 2}" max="${isTon ? 20 : 170}" value="${value}"
+      placeholder="${isTon ? "How many" : "Checkout"}" aria-label="${isTon ? "Number of 180s" : "Checkout score"}">
+    <button class="link-button extra-remove" type="button" aria-label="Remove">✕</button>
+  </div>`;
+}
+
+function extrasBlock(f, r) {
+  const tons = r?.oneEighties || [];
+  const outs = r?.checkouts || [];
+  const count = tons.length + outs.length;
+  return `<details class="portal-extras" ${count ? "open" : ""}>
+    <summary>180s &amp; high checkouts ${count ? `(${count})` : ""}</summary>
+    <div class="portal-extra-list" data-list="180">
+      <strong>🎯 180s</strong>
+      ${tons.map(t => extraRow("180", f, t)).join("")}
+    </div>
+    <button class="link-button extra-add" type="button" data-type="180">+ Add 180</button>
+    <div class="portal-extra-list" data-list="checkout">
+      <strong>🔥 High checkouts</strong>
+      ${outs.map(c => extraRow("checkout", f, c)).join("")}
+    </div>
+    <button class="link-button extra-add" type="button" data-type="checkout">+ Add checkout</button>
+  </details>`;
+}
+
+// Reads the 180/checkout rows for one match. Returns { oneEighties, checkouts } or { error }.
+function readExtras(row, label) {
+  const oneEighties = [], checkouts = [];
+  for (const el of row.querySelectorAll(".portal-extra-row")) {
+    const pick = el.querySelector(".extra-player").value;
+    const text = el.querySelector(".extra-value").value.trim();
+    if (!pick && text === "") continue;
+    if (!pick) return { error: `${label}'s match: choose a player for each 180/checkout.` };
+    const [team, player] = pick.split("|");
+    const n = Number(text);
+
+    if (el.dataset.type === "180") {
+      if (!Number.isInteger(n) || n < 1) return { error: `${label}'s match: enter how many 180s ${player} hit.` };
+      const same = oneEighties.find(t => t.player === player && t.team === team);
+      if (same) same.total += n; else oneEighties.push({ player, team, total: n });
+    } else {
+      if (!Number.isInteger(n) || n < 2 || n > 170 || IMPOSSIBLE_CHECKOUTS.includes(n)) {
+        return { error: `${label}'s match: ${text || "blank"} is not a valid checkout for ${player}.` };
+      }
+      checkouts.push({ player, team, score: n });
+    }
+  }
+  return { oneEighties, checkouts };
+}
+
 /* ---------- admin score entry ---------- */
 
 async function loadResults() {
@@ -137,6 +209,7 @@ async function renderAdmin() {
         <input type="number" class="as" min="0" max="${league.pointsPerMatch}" value="${r?.as ?? ""}" aria-label="${esc(f.away)} score">
         <span class="portal-team">${esc(f.away)}</span>
         ${r ? `<span class="badge done">Saved</span>` : `<span class="badge">Not entered</span>`}
+        ${extrasBlock(f, r)}
       </div>`;
     }).join("");
 
@@ -174,6 +247,19 @@ async function renderAdmin() {
     dateIndex = Number(e.target.value);
     renderAdmin();
   });
+  root.querySelectorAll(".portal-match").forEach(row => {
+    const league = LEAGUE_DATA[row.dataset.league];
+    const f = league.fixtures.find(m => m.id === Number(row.dataset.fixture));
+    row.addEventListener("click", e => {
+      const add = e.target.closest(".extra-add");
+      if (add) {
+        row.querySelector(`.portal-extra-list[data-list="${add.dataset.type}"]`)
+          .insertAdjacentHTML("beforeend", extraRow(add.dataset.type, f));
+      }
+      const remove = e.target.closest(".extra-remove");
+      if (remove) remove.closest(".portal-extra-row").remove();
+    });
+  });
   root.querySelector("#scores-form").addEventListener("submit", e => {
     e.preventDefault();
     saveScores(results);
@@ -191,7 +277,12 @@ async function saveScores(existing) {
     const asText = row.querySelector(".as").value.trim();
     const label = row.querySelector(".home").textContent;
 
+    const extras = readExtras(row, label);
+    if (extras.error) return message(extras.error, "error");
+    const hasExtras = extras.oneEighties.length || extras.checkouts.length;
+
     if (hsText === "" && asText === "") {
+      if (hasExtras) return message(`Enter the score for ${label}'s match before adding 180s or checkouts.`, "error");
       if (existing[id]) { batch.delete(doc(db, "results", id)); cleared++; }
       continue;
     }
@@ -203,12 +294,17 @@ async function saveScores(existing) {
     if (hs + as !== league.pointsPerMatch) {
       return message(`${label}'s match: scores must add up to ${league.pointsPerMatch}.`, "error");
     }
-    if (existing[id]?.hs === hs && existing[id]?.as === as) continue;
+    const old = existing[id];
+    if (old?.hs === hs && old?.as === as &&
+        JSON.stringify(old.oneEighties || []) === JSON.stringify(extras.oneEighties) &&
+        JSON.stringify(old.checkouts || []) === JSON.stringify(extras.checkouts)) continue;
 
     batch.set(doc(db, "results", id), {
       league: row.dataset.league,
       fixtureId: Number(row.dataset.fixture),
       hs, as,
+      oneEighties: extras.oneEighties,
+      checkouts: extras.checkouts,
       updatedBy: currentUser.uid,
       updatedAt: serverTimestamp()
     });
@@ -223,7 +319,9 @@ async function saveScores(existing) {
     message(`Saved ${saved} result(s)${cleared ? `, cleared ${cleared}` : ""}. The website is now updated.`, "success");
   } catch (err) {
     console.error(err);
-    message("Could not save results. Check you are an admin.", "error");
+    message(err?.code === "permission-denied"
+      ? "Could not save results: permission denied. Please contact Michael Rabbitte."
+      : `Could not save results: ${err?.message || err}`, "error");
   }
 }
 

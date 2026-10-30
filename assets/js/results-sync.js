@@ -10,6 +10,11 @@ window.RESULTS_READY = (async function () {
     if ("stringValue" in v) return v.stringValue;
     if ("booleanValue" in v) return v.booleanValue;
     if ("arrayValue" in v) return (v.arrayValue.values || []).map(parseValue);
+    if ("mapValue" in v) {
+      const o = {};
+      Object.entries(v.mapValue.fields || {}).forEach(([k, x]) => { o[k] = parseValue(x); });
+      return o;
+    }
     if ("nullValue" in v) return null;
     return null;
   }
@@ -34,6 +39,20 @@ window.RESULTS_READY = (async function () {
       fixture.as = r.as;
       fixture.homePlayers = r.homePlayers || [];
       fixture.awayPlayers = r.awayPlayers || [];
+
+      // Add 180s and checkouts from this match to the league stats.
+      const stats = LEAGUE_DATA.stats && LEAGUE_DATA.stats[r.league];
+      if (!stats) return;
+      (r.oneEighties || []).forEach(t => {
+        if (!t || !t.player || typeof t.total !== "number") return;
+        const row = stats.oneEighties.find(s => s.player === t.player && s.team === t.team);
+        if (row) row.total += t.total;
+        else stats.oneEighties.push({ player: t.player, team: t.team, total: t.total });
+      });
+      (r.checkouts || []).forEach(c => {
+        if (!c || !c.player || typeof c.score !== "number") return;
+        stats.checkouts.push({ player: c.player, team: c.team, score: c.score });
+      });
     });
   } catch (error) {
     console.warn("Could not load online results, using local data.", error);
