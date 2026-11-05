@@ -36,12 +36,15 @@ document.addEventListener("DOMContentLoaded", async () => {
   content.innerHTML = `
     <div class="stats-grid">
       <article class="panel">
-        <h2>🎯 180 Leaderboard</h2>
-        ${leaderboard(stats.oneEighties, "total", "No 180s recorded yet.")}
-      </article>
-      <article class="panel">
         <h2>🔥 Highest Checkouts</h2>
         ${leaderboard(stats.checkouts, "score", "No checkouts recorded yet.")}
       </article>
+      ${[["180", "oneEighties"], ["177", "oneSeventySevens"], ["174", "oneSeventyFours"], ["171", "oneSeventyOnes"]]
+        .filter(([score, key]) => score === "180" || (stats[key] || []).some(r => r.total > 0))
+        .map(([score, key]) => `
+      <article class="panel">
+        <h2>🎯 ${score} Leaderboard</h2>
+        ${leaderboard(stats[key] || [], "total", `No ${score}s recorded yet.`)}
+      </article>`).join("")}
     </div>`;
 });
