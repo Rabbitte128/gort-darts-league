@@ -43,11 +43,14 @@ window.RESULTS_READY = (async function () {
       // Add 180s and checkouts from this match to the league stats.
       const stats = LEAGUE_DATA.stats && LEAGUE_DATA.stats[r.league];
       if (!stats) return;
-      (r.oneEighties || []).forEach(t => {
-        if (!t || !t.player || typeof t.total !== "number") return;
-        const row = stats.oneEighties.find(s => s.player === t.player && s.team === t.team);
-        if (row) row.total += t.total;
-        else stats.oneEighties.push({ player: t.player, team: t.team, total: t.total });
+      ["oneEighties", "oneSeventySevens", "oneSeventyFours", "oneSeventyOnes"].forEach(key => {
+        if (!stats[key]) stats[key] = [];
+        (r[key] || []).forEach(t => {
+          if (!t || !t.player || typeof t.total !== "number") return;
+          const row = stats[key].find(s => s.player === t.player && s.team === t.team);
+          if (row) row.total += t.total;
+          else stats[key].push({ player: t.player, team: t.team, total: t.total });
+        });
       });
       (r.checkouts || []).forEach(c => {
         if (!c || !c.player || typeof c.score !== "number") return;
