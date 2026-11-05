@@ -123,29 +123,37 @@ function playerOptions(f, selected = "") {
   return `<option value="">Select player…</option>${group(f.home)}${group(f.away)}`;
 }
 
+// Max-score types recorded per match (type = score, key = Firestore field).
+const MAX_TYPES = [
+  { type: "180", key: "oneEighties" },
+  { type: "177", key: "oneSeventySevens" },
+  { type: "174", key: "oneSeventyFours" },
+  { type: "171", key: "oneSeventyOnes" }
+];
+
 function extraRow(type, f, entry = {}) {
   const selected = entry.player ? `${entry.team}|${entry.player}` : "";
-  const isTon = type === "180";
+  const isTon = type !== "checkout";
   const value = isTon ? (entry.total ?? 1) : (entry.score ?? "");
   return `<div class="portal-extra-row" data-type="${type}">
     <select class="extra-player" aria-label="Player">${playerOptions(f, selected)}</select>
     <input type="number" class="extra-value" min="${isTon ? 1 : 2}" max="${isTon ? 20 : 170}" value="${value}"
-      placeholder="${isTon ? "How many" : "Checkout"}" aria-label="${isTon ? "Number of 180s" : "Checkout score"}">
+      placeholder="${isTon ? "How many" : "Checkout"}" aria-label="${isTon ? `Number of ${type}s` : "Checkout score"}">
     <button class="link-button extra-remove" type="button" aria-label="Remove">✕</button>
   </div>`;
 }
 
 function extrasBlock(f, r) {
-  const tons = r?.oneEighties || [];
   const outs = r?.checkouts || [];
-  const count = tons.length + outs.length;
+  const count = MAX_TYPES.reduce((n, m) => n + (r?.[m.key]?.length || 0), 0) + outs.length;
   return `<details class="portal-extras" ${count ? "open" : ""}>
-    <summary>180s &amp; high checkouts ${count ? `(${count})` : ""}</summary>
-    <div class="portal-extra-list" data-list="180">
-      <strong>🎯 180s</strong>
-      ${tons.map(t => extraRow("180", f, t)).join("")}
+    <summary>180s, 177s, 174s, 171s &amp; high checkouts ${count ? `(${count})` : ""}</summary>
+    ${MAX_TYPES.map(m => `
+    <div class="portal-extra-list" data-list="${m.type}">
+      <strong>🎯 ${m.type}s</strong>
+      ${(r?.[m.key] || []).map(t => extraRow(m.type, f, t)).join("")}
     </div>
-    <button class="link-button extra-add" type="button" data-type="180">+ Add 180</button>
+    <button class="link-button extra-add" type="button" data-type="${m.type}">+ Add ${m.type}</button>`).join("")}
     <div class="portal-extra-list" data-list="checkout">
       <strong>🔥 High checkouts</strong>
       ${outs.map(c => extraRow("checkout", f, c)).join("")}
@@ -154,9 +162,12 @@ function extrasBlock(f, r) {
   </details>`;
 }
 
-// Reads the 180/checkout rows for one match. Returns { oneEighties, checkouts } or { error }.
+// Reads the max-score/checkout rows for one match.
+// Returns { oneEighties, oneSeventySevens, oneSeventyFours, oneSeventyOnes, checkouts } or { error }.
 function readExtras(row, label) {
-  const oneEighties = [], checkouts = [];
+  const result = { checkouts: [] };
+  MAX_TYPES.forEach(m => { result[m.key] = []; });
+  const checkouts = result.checkouts;
   for (const el of row.querySelectorAll(".portal-extra-row")) {
     const pick = el.querySelector(".extra-player").value;
     const text = el.querySelector(".extra-value").value.trim();
@@ -165,10 +176,12 @@ function readExtras(row, label) {
     const [team, player] = pick.split("|");
     const n = Number(text);
 
-    if (el.dataset.type === "180") {
-      if (!Number.isInteger(n) || n < 1) return { error: `${label}'s match: enter how many 180s ${player} hit.` };
-      const same = oneEighties.find(t => t.player === player && t.team === team);
-      if (same) same.total += n; else oneEighties.push({ player, team, total: n });
+    const max = MAX_TYPES.find(m => m.type === el.dataset.type);
+    if (max) {
+      if (!Number.isInteger(n) || n < 1) return { error: `${label}'s match: enter how many ${max.type}s ${player} hit.` };
+      const list = result[max.key];
+      const same = list.find(t => t.player === player && t.team === team);
+      if (same) same.total += n; else list.push({ player, team, total: n });
     } else {
       if (!Number.isInteger(n) || n < 2 || n > 170 || IMPOSSIBLE_CHECKOUTS.includes(n)) {
         return { error: `${label}'s match: ${text || "blank"} is not a valid checkout for ${player}.` };
@@ -176,7 +189,7 @@ function readExtras(row, label) {
       checkouts.push({ player, team, score: n });
     }
   }
-  return { oneEighties, checkouts };
+  return result;
 }
 
 /* ---------- admin score entry ---------- */
@@ -279,10 +292,10 @@ async function saveScores(existing) {
 
     const extras = readExtras(row, label);
     if (extras.error) return message(extras.error, "error");
-    const hasExtras = extras.oneEighties.length || extras.checkouts.length;
+    const hasExtras = extras.checkouts.length || MAX_TYPES.some(m => extras[m.key].length);
 
     if (hsText === "" && asText === "") {
-      if (hasExtras) return message(`Enter the score for ${label}'s match before adding 180s or checkouts.`, "error");
+      if (hasExtras) return message(`Enter the score for ${label}'s match before adding max scores or checkouts.`, "error");
       if (existing[id]) { batch.delete(doc(db, "results", id)); cleared++; }
       continue;
     }
@@ -296,15 +309,14 @@ async function saveScores(existing) {
     }
     const old = existing[id];
     if (old?.hs === hs && old?.as === as &&
-        JSON.stringify(old.oneEighties || []) === JSON.stringify(extras.oneEighties) &&
+        MAX_TYPES.every(m => JSON.stringify(old[m.key] || []) === JSON.stringify(extras[m.key])) &&
         JSON.stringify(old.checkouts || []) === JSON.stringify(extras.checkouts)) continue;
 
     batch.set(doc(db, "results", id), {
       league: row.dataset.league,
       fixtureId: Number(row.dataset.fixture),
       hs, as,
-      oneEighties: extras.oneEighties,
-      checkouts: extras.checkouts,
+      ...extras,
       updatedBy: currentUser.uid,
       updatedAt: serverTimestamp()
     });
@@ -320,7 +332,7 @@ async function saveScores(existing) {
   } catch (err) {
     console.error(err);
     message(err?.code === "permission-denied"
-      ? "Could not save results: permission denied. Please contact Michael Rabbitte."
+      ? "Could not save results: permission denied. Check you are an admin and the Firestore rules allow the 180/checkout fields."
       : `Could not save results: ${err?.message || err}`, "error");
   }
 }
