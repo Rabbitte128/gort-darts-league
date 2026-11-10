@@ -48,7 +48,7 @@ const TEAM_DATA = {
     honours: [] 
   },
   "O'Donnell's A": { league: "B League", established: "", about: "", 
-    players: ["Lorcan Walsh", "James Gormally", "Niall Carr", "Ben Mulcair", "Nathan Smith", "Declan Flaherty", "Jack Linnane", "Daniel Cunningham"],  
+    players: ["Lorcan Walsh", "James Gormally", "Niall Carr", "Ben Mulcair", "Nathan Smith", "Declan Flaherty", "Jack Linnane", "Damien Cunningham"],  
 //    honours: [{title: "B Shield", years: "2025"}] 
   },
   "O'Donnell's B": { league: "B League", established: "", about: "", 
